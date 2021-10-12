@@ -23,10 +23,12 @@ internal class ScreenTest {
     @Test
     fun toWidget() {
         val screen = Screen(
-            title = "Screen1",
             child = child1,
-            showAppBar = false,
-            safe = true
+            safe = true,
+            appBar = AppBar(
+                title = "Yo",
+                children = listOf(IconButton("1"), IconButton("2"))
+            )
         )
 
         val widget = screen.toWidget()
@@ -34,10 +36,11 @@ internal class ScreenTest {
         assertEquals(WidgetType.Screen, widget.type)
         assertNull(widget.action)
 
-        assertEquals(3, widget.attributes.size)
-        assertEquals(screen.title, widget.attributes["title"])
-        assertEquals(screen.showAppBar, widget.attributes["showAppBar"])
+        assertEquals(1, widget.attributes.size)
         assertEquals(screen.safe, widget.attributes["safe"])
+
+        assertEquals(screen.appBar?.title, widget.appBar?.attributes?.get("title"))
+        assertEquals(screen.appBar?.children?.size, widget.appBar?.children?.size)
 
         assertEquals(1, widget.children.size)
         assertEquals(widget1, widget.children[0])

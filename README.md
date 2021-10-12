@@ -25,7 +25,6 @@ class HomeScreen(
     @PostMapping
     fun index() = Screen(
         safe = true,
-        showAppBar = false,
         child = Container(
             alignment = Center,
             padding = 10.0,
@@ -95,8 +94,7 @@ Here is the equivalent JSON returned to the Flutter app
 {
   "type": "Screen",
   "attributes": {
-    "safe": true,
-    "showTitleBar": false
+    "safe": true
   },
   "children": [
     {
