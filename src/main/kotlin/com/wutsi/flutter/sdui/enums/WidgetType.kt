@@ -6,6 +6,8 @@ enum class WidgetType {
     Column,
     Container,
     Dialog,
+    DropdownButton,
+    DropdownMenuItem,
     Flexible,
     Form,
     Icon,
