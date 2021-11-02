@@ -15,6 +15,7 @@ class Input(
     val type: InputType = InputType.Text,
     val maxLines: Int? = null,
     val maxLength: Int? = null,
+    val countries: List<String>? = null,
     val minLength: Int = 0,
     val action: Action? = null
 ) : WidgetAware {
@@ -33,6 +34,7 @@ class Input(
             "maxLines" to maxLines,
             "maxLength" to maxLength,
             "minLength" to minLength,
+            "countries" to countries
         ),
         action = action
     )

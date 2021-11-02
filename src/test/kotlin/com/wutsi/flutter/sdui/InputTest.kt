@@ -25,7 +25,8 @@ internal class InputTest {
             hideText = true,
             hint = "This is the hint",
             maxLines = 10,
-            readOnly = true
+            readOnly = true,
+            countries = listOf("CM", "GB")
         )
 
         val widget = input.toWidget()
@@ -35,7 +36,7 @@ internal class InputTest {
         assertEquals(input.action?.url, widget.action?.url)
         assertEquals(input.action?.type, widget.action?.type)
 
-        assertEquals(12, widget.attributes.size)
+        assertEquals(13, widget.attributes.size)
         assertEquals(input.name, widget.attributes["name"])
         assertEquals(input.value, widget.attributes["value"])
         assertEquals(input.type, widget.attributes["type"])
@@ -48,6 +49,7 @@ internal class InputTest {
         assertEquals(input.hint, widget.attributes["hint"])
         assertEquals(input.maxLines, widget.attributes["maxLines"])
         assertEquals(input.readOnly, widget.attributes["readOnly"])
+        assertEquals(input.countries, widget.attributes["countries"])
 
         assertEquals(0, widget.children.size)
     }
