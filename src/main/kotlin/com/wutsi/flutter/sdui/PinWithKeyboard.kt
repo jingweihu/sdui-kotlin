@@ -11,7 +11,7 @@ data class PinWithKeyboard(
     val action: Action? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
-        type = WidgetType.PinWidthKeyboard,
+        type = WidgetType.PinWithKeyboard,
         attributes = mapOf(
             "name" to name,
             "color" to color,

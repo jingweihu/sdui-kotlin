@@ -19,7 +19,7 @@ enum class WidgetType {
     ListItemSwitch,
     Page,
     PageView,
-    PinWidthKeyboard,
+    PinWithKeyboard,
     Row,
     Radio,
     RadioGroup,

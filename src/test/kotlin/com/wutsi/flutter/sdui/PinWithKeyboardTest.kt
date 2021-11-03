@@ -21,7 +21,7 @@ internal class PinWithKeyboardTest {
 
         val widget = button.toWidget()
 
-        assertEquals(WidgetType.PinWidthKeyboard, widget.type)
+        assertEquals(WidgetType.PinWithKeyboard, widget.type)
         assertEquals(button.action, widget.action)
 
         assertEquals(5, widget.attributes.size)
