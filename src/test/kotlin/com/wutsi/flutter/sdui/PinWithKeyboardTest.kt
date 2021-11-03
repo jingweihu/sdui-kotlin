@@ -14,7 +14,9 @@ internal class PinWithKeyboardTest {
             name = "foo",
             action = Action(
                 type = Prompt
-            )
+            ),
+            maxLength = 7,
+            deleteText = "xxx"
         )
 
         val widget = button.toWidget()
@@ -22,10 +24,12 @@ internal class PinWithKeyboardTest {
         assertEquals(WidgetType.PinWidthKeyboard, widget.type)
         assertEquals(button.action, widget.action)
 
-        assertEquals(3, widget.attributes.size)
+        assertEquals(5, widget.attributes.size)
         assertEquals(button.hideText, widget.attributes["hideText"])
         assertEquals(button.color, widget.attributes["color"])
         assertEquals(button.name, widget.attributes["name"])
+        assertEquals(button.deleteText, widget.attributes["deleteText"])
+        assertEquals(button.maxLength, widget.attributes["maxLength"])
 
         assertEquals(0, widget.children.size)
     }
