@@ -2,7 +2,7 @@ package com.wutsi.flutter.sdui.enums
 
 enum class ActionType {
     Page,
-    Screen,
+    Route,
     Command,
     Prompt
 }

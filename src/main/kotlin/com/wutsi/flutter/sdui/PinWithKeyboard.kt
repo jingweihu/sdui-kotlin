@@ -8,6 +8,8 @@ data class PinWithKeyboard(
     val hideText: Boolean? = null,
     val maxLength: Int? = null,
     val deleteText: String? = null,
+    val pinSize: Double? = null,
+    val keyboardButtonSize: Double? = null,
     val action: Action? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
@@ -18,6 +20,8 @@ data class PinWithKeyboard(
             "deleteText" to deleteText,
             "maxLength" to maxLength,
             "hideText" to hideText,
+            "pinSize" to pinSize,
+            "keyboardButtonSize" to keyboardButtonSize,
         ),
         action = action
     )
