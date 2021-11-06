@@ -6,5 +6,6 @@ class Action(
     val type: ActionType? = null,
     val url: String = "",
     val prompt: Dialog? = null,
-    val replacement: Boolean? = null
+    val replacement: Boolean? = null,
+    val parameters: Map<String, String>? = null
 )
