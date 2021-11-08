@@ -1,5 +1,8 @@
 package com.wutsi.flutter.sdui
 
+import com.wutsi.flutter.sdui.enums.CrossAxisAlignment.baseline
+import com.wutsi.flutter.sdui.enums.MainAxisAlignment.center
+import com.wutsi.flutter.sdui.enums.MainAxisSize.max
 import com.wutsi.flutter.sdui.enums.WidgetType
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
@@ -8,16 +11,22 @@ import org.junit.jupiter.api.Test
 internal class ColumnTest {
     @Test
     fun toWidget() {
-        val column = Column(
-            children = listOf(Container(), Container())
+        val obj = Column(
+            children = listOf(Container(), Container()),
+            mainAxisAlignment = center,
+            crossAxisAlignment = baseline,
+            mainAxisSize = max
         )
 
-        val widget = column.toWidget()
+        val widget = obj.toWidget()
 
         assertEquals(WidgetType.Column, widget.type)
         assertNull(widget.action)
 
-        assertEquals(0, widget.attributes.size)
+        assertEquals(3, widget.attributes.size)
+        assertEquals(obj.mainAxisAlignment, widget.attributes["mainAxisAlignment"])
+        assertEquals(obj.crossAxisAlignment, widget.attributes["crossAxisAlignment"])
+        assertEquals(obj.mainAxisSize, widget.attributes["mainAxisSize"])
 
         assertEquals(2, widget.children.size)
     }
