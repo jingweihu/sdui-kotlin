@@ -25,7 +25,7 @@ internal class ScreenTest {
         val screen = Screen(
             child = child1,
             safe = true,
-            foregroundColor = "#ffff00",
+            backgroundColor = "#ffff00",
             appBar = AppBar(
                 title = "Yo",
                 actions = listOf(IconButton("1"), IconButton("2"))
@@ -39,7 +39,7 @@ internal class ScreenTest {
 
         assertEquals(2, widget.attributes.size)
         assertEquals(screen.safe, widget.attributes["safe"])
-        assertEquals(screen.foregroundColor, widget.attributes["foregroundColor"])
+        assertEquals(screen.backgroundColor, widget.attributes["backgroundColor"])
 
         assertEquals(screen.appBar?.title, widget.appBar?.attributes?.get("title"))
 

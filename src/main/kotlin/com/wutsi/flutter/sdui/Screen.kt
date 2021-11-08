@@ -6,14 +6,14 @@ class Screen(
     val appBar: AppBar? = null,
     val safe: Boolean = false,
     val child: WidgetAware? = null,
-    val foregroundColor: String? = null,
+    val backgroundColor: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Screen,
         children = child?.let { listOf(it.toWidget()) } ?: emptyList(),
         attributes = mapOf(
             "safe" to safe,
-            "foregroundColor" to foregroundColor,
+            "backgroundColor" to backgroundColor,
         ),
         appBar = appBar?.toWidget(),
     )
