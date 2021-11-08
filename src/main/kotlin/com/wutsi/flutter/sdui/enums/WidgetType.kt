@@ -17,6 +17,7 @@ enum class WidgetType {
     ListView,
     ListItem,
     ListItemSwitch,
+    MoneyText,
     Page,
     PageView,
     PinWithKeyboard,
