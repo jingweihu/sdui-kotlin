@@ -15,7 +15,7 @@ class Column(
         type = Column,
         attributes = mapOf(
             "mainAxisAlignment" to mainAxisAlignment,
-            "maxAxisSize" to mainAxisSize,
+            "mainAxisSize" to mainAxisSize,
             "crossAxisAlignment" to crossAxisAlignment,
         ),
         children = children.map { it.toWidget() }
