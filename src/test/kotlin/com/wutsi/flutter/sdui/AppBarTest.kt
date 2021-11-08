@@ -11,7 +11,7 @@ internal class AppBarTest {
         val obj = AppBar(
             title = "Screen1",
             actions = listOf(IconButton("a"), IconButton("b")),
-            elevation = 0,
+            elevation = 1.0,
             foregroundColor = "#ffffff",
             backgroundColor = "#ff0000",
             leading = IconButton("c")

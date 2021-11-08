@@ -4,7 +4,7 @@ import com.wutsi.flutter.sdui.enums.WidgetType.AppBar
 
 class AppBar(
     val title: String? = null,
-    val elevation: Int? = null,
+    val elevation: Double? = null,
     val backgroundColor: String? = null,
     val foregroundColor: String? = null,
     val leading: WidgetAware? = null,
