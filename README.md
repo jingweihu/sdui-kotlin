@@ -1,4 +1,5 @@
 [![](https://github.com/wutsi/sdui-kotlin/actions/workflows/master.yml/badge.svg)](https://github.com/wutsi/sdui-kotlin/actions/workflows/master.yml)
+![](https://img.shields.io/github/v/tag/wutsi/sdui-kotlin)
 ![](https://img.shields.io/badge/licence-MIT-yellow.svg)
 ![](https://img.shields.io/badge/language-kotlin-blue.svg)
 ![](https://img.shields.io/badge/language-flutter-darkblue.svg)
