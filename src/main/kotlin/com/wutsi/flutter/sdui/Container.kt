@@ -11,7 +11,7 @@ class Container(
     val border: Double? = null,
     val borderRadius: Double? = null,
     val borderColor: String? = null,
-    val child: WidgetAware? = null
+    val child: WidgetAware? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Container,

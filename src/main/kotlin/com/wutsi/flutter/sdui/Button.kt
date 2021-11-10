@@ -8,7 +8,8 @@ class Button(
     val caption: String,
     val type: ButtonType = Elevated,
     val padding: Double = 15.0,
-    val action: Action? = null
+    val action: Action? = null,
+    val stretched: Boolean? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Button,
@@ -16,7 +17,8 @@ class Button(
         attributes = mapOf(
             "caption" to caption,
             "padding" to padding,
-            "type" to type
+            "type" to type,
+            "stretched" to stretched
         )
     )
 }

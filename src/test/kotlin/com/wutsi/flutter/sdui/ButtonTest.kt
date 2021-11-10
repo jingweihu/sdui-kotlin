@@ -13,6 +13,7 @@ internal class ButtonTest {
             caption = "Yo",
             padding = 10.0,
             type = Outlined,
+            stretched = false,
             action = Action(
                 type = Prompt
             )
@@ -23,10 +24,11 @@ internal class ButtonTest {
         assertEquals(WidgetType.Button, widget.type)
         assertEquals(button.action, widget.action)
 
-        assertEquals(3, widget.attributes.size)
+        assertEquals(4, widget.attributes.size)
         assertEquals(button.caption, widget.attributes["caption"])
         assertEquals(button.padding, widget.attributes["padding"])
         assertEquals(button.type, widget.attributes["type"])
+        assertEquals(button.stretched, widget.attributes["stretched"])
 
         assertEquals(0, widget.children.size)
     }
