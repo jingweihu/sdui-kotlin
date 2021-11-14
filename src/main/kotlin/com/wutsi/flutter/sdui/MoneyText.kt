@@ -6,6 +6,7 @@ class MoneyText(
     val value: Double,
     val currency: String,
     val color: String? = null,
+    val numberFormat: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.MoneyText,
@@ -13,6 +14,7 @@ class MoneyText(
             "value" to value,
             "color" to color,
             "currency" to currency,
+            "numberFormat" to numberFormat,
         )
     )
 }

@@ -9,6 +9,7 @@ class AppBar(
     val foregroundColor: String? = null,
     val leading: WidgetAware? = null,
     val actions: List<WidgetAware>? = null,
+    val automaticallyImplyLeading: Boolean? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = AppBar,
@@ -17,6 +18,7 @@ class AppBar(
             "elevation" to elevation,
             "backgroundColor" to backgroundColor,
             "foregroundColor" to foregroundColor,
+            "automaticallyImplyLeading" to automaticallyImplyLeading,
             "actions" to actions?.map { it.toWidget() },
             "leading" to leading?.toWidget()
         ),
