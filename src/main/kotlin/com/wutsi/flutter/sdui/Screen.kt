@@ -3,6 +3,7 @@ package com.wutsi.flutter.sdui
 import com.wutsi.flutter.sdui.enums.WidgetType.Screen
 
 class Screen(
+    val id: String? = null,
     val appBar: AppBar? = null,
     val safe: Boolean = false,
     val child: WidgetAware? = null,
@@ -12,6 +13,7 @@ class Screen(
         type = Screen,
         children = child?.let { listOf(it.toWidget()) } ?: emptyList(),
         attributes = mapOf(
+            "id" to id,
             "safe" to safe,
             "backgroundColor" to backgroundColor,
         ),

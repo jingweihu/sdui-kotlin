@@ -23,6 +23,7 @@ internal class ScreenTest {
     @Test
     fun toWidget() {
         val screen = Screen(
+            id = "xxx",
             child = child1,
             safe = true,
             backgroundColor = "#ffff00",
@@ -37,7 +38,8 @@ internal class ScreenTest {
         assertEquals(WidgetType.Screen, widget.type)
         assertNull(widget.action)
 
-        assertEquals(2, widget.attributes.size)
+        assertEquals(3, widget.attributes.size)
+        assertEquals(screen.id, widget.attributes["id"])
         assertEquals(screen.safe, widget.attributes["safe"])
         assertEquals(screen.backgroundColor, widget.attributes["backgroundColor"])
 
