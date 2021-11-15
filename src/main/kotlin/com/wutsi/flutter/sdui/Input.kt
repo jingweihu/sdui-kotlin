@@ -4,7 +4,7 @@ import com.wutsi.flutter.sdui.enums.InputType
 import com.wutsi.flutter.sdui.enums.WidgetType.Input
 
 class Input(
-    val id: String,
+    val id: String? = null,
     val name: String,
     val value: String? = null,
     val hideText: Boolean = false,
