@@ -10,6 +10,7 @@ internal class InputTest {
     @Test
     fun toWidget() {
         val input = Input(
+            id = "xx",
             name = "foo",
             value = "bar",
             type = Email,
@@ -36,7 +37,8 @@ internal class InputTest {
         assertEquals(input.action?.url, widget.action?.url)
         assertEquals(input.action?.type, widget.action?.type)
 
-        assertEquals(13, widget.attributes.size)
+        assertEquals(14, widget.attributes.size)
+        assertEquals(input.id, widget.attributes["id"])
         assertEquals(input.name, widget.attributes["name"])
         assertEquals(input.value, widget.attributes["value"])
         assertEquals(input.type, widget.attributes["type"])

@@ -4,6 +4,7 @@ import com.wutsi.flutter.sdui.enums.InputType
 import com.wutsi.flutter.sdui.enums.WidgetType.Input
 
 class Input(
+    val id: String,
     val name: String,
     val value: String? = null,
     val hideText: Boolean = false,
@@ -22,6 +23,7 @@ class Input(
     override fun toWidget() = Widget(
         type = Input,
         attributes = mapOf(
+            "id" to id,
             "name" to name,
             "value" to value,
             "hideText" to hideText,

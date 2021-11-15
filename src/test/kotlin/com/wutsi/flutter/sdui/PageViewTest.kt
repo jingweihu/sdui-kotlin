@@ -12,6 +12,7 @@ internal class PageViewTest {
     @Test
     fun toWidget() {
         val view = PageView(
+            id = "xxx",
             direction = Vertical,
             children = listOf(
                 Page(url = "https://www.google.ca/1"),
@@ -23,7 +24,8 @@ internal class PageViewTest {
         assertEquals(PageView, widget.type)
         assertNull(widget.action)
 
-        assertEquals(1, widget.attributes.size)
+        assertEquals(2, widget.attributes.size)
+        assertEquals(view.id, widget.attributes["id"])
         assertEquals(Axis.Vertical, widget.attributes["direction"])
 
         assertEquals(2, widget.children.size)

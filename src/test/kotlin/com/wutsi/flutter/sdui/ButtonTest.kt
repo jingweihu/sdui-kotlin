@@ -10,6 +10,7 @@ internal class ButtonTest {
     @Test
     fun toWidget() {
         val button = Button(
+            id = "xx",
             caption = "Yo",
             padding = 10.0,
             type = Outlined,
@@ -24,7 +25,8 @@ internal class ButtonTest {
         assertEquals(WidgetType.Button, widget.type)
         assertEquals(button.action, widget.action)
 
-        assertEquals(4, widget.attributes.size)
+        assertEquals(5, widget.attributes.size)
+        assertEquals(button.id, widget.attributes["id"])
         assertEquals(button.caption, widget.attributes["caption"])
         assertEquals(button.padding, widget.attributes["padding"])
         assertEquals(button.type, widget.attributes["type"])
