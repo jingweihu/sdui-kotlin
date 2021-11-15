@@ -7,7 +7,7 @@ import kotlin.test.assertNull
 
 internal class PageTest {
     @Test
-    fun ToWidget() {
+    fun toWidget() {
         val page = Page(url = "https://www.google.ca", id = "xxx")
 
         val widget = page.toWidget()
