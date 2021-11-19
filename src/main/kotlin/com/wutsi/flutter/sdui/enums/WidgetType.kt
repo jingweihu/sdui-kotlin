@@ -3,6 +3,7 @@ package com.wutsi.flutter.sdui.enums
 enum class WidgetType {
     AppBar,
     Button,
+    CircleAvatar,
     Column,
     Container,
     Dialog,
