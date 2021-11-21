@@ -7,5 +7,6 @@ class Action(
     val url: String = "",
     val prompt: Dialog? = null,
     val replacement: Boolean? = null,
-    val parameters: Map<String, String>? = null
+    val parameters: Map<String, String>? = null,
+    val message: String? = null
 )

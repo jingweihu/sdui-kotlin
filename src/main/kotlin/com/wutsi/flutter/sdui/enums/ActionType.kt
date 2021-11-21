@@ -4,5 +4,6 @@ enum class ActionType {
     Page,
     Route,
     Command,
-    Prompt
+    Prompt,
+    Share
 }
