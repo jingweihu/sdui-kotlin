@@ -6,7 +6,8 @@ data class ListItem(
     val caption: String,
     val subCaption: String? = null,
     val iconLeft: String? = null,
-    val iconRight: String? = null
+    val iconRight: String? = null,
+    val padding: Double? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.ListItem,
@@ -14,7 +15,8 @@ data class ListItem(
             "caption" to caption,
             "subCaption" to subCaption,
             "iconLeft" to iconLeft,
-            "iconRight" to iconRight
+            "iconRight" to iconRight,
+            "padding" to padding,
         )
     )
 }
