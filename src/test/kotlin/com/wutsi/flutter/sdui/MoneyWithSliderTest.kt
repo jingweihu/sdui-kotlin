@@ -1,39 +1,37 @@
 package com.wutsi.flutter.sdui
 
 import com.wutsi.flutter.sdui.enums.WidgetType
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNull
 
-internal class MoneyWithKeyboardTest {
+internal class MoneyWithSliderTest {
     @Test
     fun toWidget() {
-        val input = MoneyWithKeyboard(
+        val input = MoneyWithSlider(
             moneyColor = "1111",
             name = "foo",
             maxLength = 7,
-            deleteText = "xxx",
-            keyboardButtonSize = 90.0,
+            maxValue = 50000.0,
             currency = "XAF",
             value = 10000,
-            keyboardColor = "2222",
+            sliderColor = "2222",
             numberFormat = "xxx"
         )
 
         val widget = input.toWidget()
 
-        assertEquals(WidgetType.MoneyWithKeyboard, widget.type)
+        assertEquals(WidgetType.MoneyWithSlider, widget.type)
         assertNull(widget.action)
 
-        assertEquals(9, widget.attributes.size)
+        assertEquals(8, widget.attributes.size)
         assertEquals(input.value, widget.attributes["value"])
         assertEquals(input.moneyColor, widget.attributes["moneyColor"])
-        assertEquals(input.keyboardColor, widget.attributes["keyboardColor"])
+        assertEquals(input.sliderColor, widget.attributes["sliderColor"])
         assertEquals(input.name, widget.attributes["name"])
-        assertEquals(input.deleteText, widget.attributes["deleteText"])
         assertEquals(input.maxLength, widget.attributes["maxLength"])
         assertEquals(input.currency, widget.attributes["currency"])
-        assertEquals(input.keyboardButtonSize, widget.attributes["keyboardButtonSize"])
+        assertEquals(input.maxValue, widget.attributes["maxValue"])
         assertEquals(input.numberFormat, widget.attributes["numberFormat"])
 
         assertEquals(0, widget.children.size)
