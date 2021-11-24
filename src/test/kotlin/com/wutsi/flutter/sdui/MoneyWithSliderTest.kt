@@ -12,7 +12,7 @@ internal class MoneyWithSliderTest {
             moneyColor = "1111",
             name = "foo",
             maxLength = 7,
-            maxValue = 50000.0,
+            maxValue = 50000,
             currency = "XAF",
             value = 10000,
             sliderColor = "2222",

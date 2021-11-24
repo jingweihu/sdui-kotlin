@@ -4,7 +4,7 @@ import com.wutsi.flutter.sdui.enums.WidgetType
 
 data class MoneyWithSlider(
     val name: String,
-    val maxValue: Double,
+    val maxValue: Int,
     val maxLength: Int? = null,
     val value: Int? = null,
     val currency: String? = null,
