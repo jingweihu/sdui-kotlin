@@ -17,7 +17,9 @@ internal class ButtonTest {
             stretched = false,
             action = Action(
                 type = Prompt
-            )
+            ),
+            icon = "xxx",
+            iconSize = 11.0
         )
 
         val widget = button.toWidget()
@@ -25,12 +27,14 @@ internal class ButtonTest {
         assertEquals(WidgetType.Button, widget.type)
         assertEquals(button.action, widget.action)
 
-        assertEquals(5, widget.attributes.size)
+        assertEquals(7, widget.attributes.size)
         assertEquals(button.id, widget.attributes["id"])
         assertEquals(button.caption, widget.attributes["caption"])
         assertEquals(button.padding, widget.attributes["padding"])
         assertEquals(button.type, widget.attributes["type"])
         assertEquals(button.stretched, widget.attributes["stretched"])
+        assertEquals(button.icon, widget.attributes["icon"])
+        assertEquals(button.iconSize, widget.attributes["iconSize"])
 
         assertEquals(0, widget.children.size)
     }
