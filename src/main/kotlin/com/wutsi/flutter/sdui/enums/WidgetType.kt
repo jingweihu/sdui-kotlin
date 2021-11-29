@@ -6,6 +6,7 @@ enum class WidgetType {
     CircleAvatar,
     Column,
     Container,
+    DefaultTabController,
     Dialog,
     Divider,
     DropdownButton,
@@ -29,6 +30,9 @@ enum class WidgetType {
     Radio,
     RadioGroup,
     Spacer,
+    Tab,
+    TabBar,
+    TabBarView,
     Text,
     Screen,
 }

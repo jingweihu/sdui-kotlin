@@ -16,13 +16,14 @@ internal class AppBarTest {
             backgroundColor = "#ff0000",
             leading = IconButton("c"),
             automaticallyImplyLeading = false,
+            bottom = TabBar(tabs = listOf(Container()))
         )
 
         val widget = obj.toWidget()
 
         assertEquals(WidgetType.AppBar, widget.type)
 
-        assertEquals(7, widget.attributes.size)
+        assertEquals(8, widget.attributes.size)
         assertEquals(obj.title, widget.attributes["title"])
         assertEquals(obj.elevation, widget.attributes["elevation"])
         assertEquals(obj.foregroundColor, widget.attributes["foregroundColor"])
@@ -39,6 +40,9 @@ internal class AppBarTest {
         val leading = (widget.attributes["leading"]) as Widget
         assertEquals(WidgetType.IconButton, leading.type)
         assertEquals("c", leading.attributes["icon"])
+
+        val bottom = (widget.attributes["bottom"]) as Widget
+        assertEquals(WidgetType.TabBar, bottom.type)
 
         assertNull(widget.action)
     }
