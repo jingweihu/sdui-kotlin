@@ -1,7 +1,7 @@
 package com.wutsi.flutter.sdui.enums
 
 enum class CameraLensDirection {
-    font,
+    front,
     back,
     external
 }
