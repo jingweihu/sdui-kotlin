@@ -6,7 +6,7 @@ import com.wutsi.flutter.sdui.enums.WidgetType.Button
 
 class Button(
     val id: String? = null,
-    val caption: String,
+    val caption: String = "",
     val type: ButtonType = Elevated,
     val padding: Double = 15.0,
     val action: Action? = null,
