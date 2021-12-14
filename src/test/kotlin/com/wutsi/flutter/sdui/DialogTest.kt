@@ -12,17 +12,25 @@ internal class DialogTest {
         val dialog = Dialog(
             type = Information,
             title = "information",
-            message = "Yo man"
+            message = "Yo man",
+            actions = listOf(IconButton("a"), IconButton("b")),
         )
 
         val widget = dialog.toWidget()
 
         assertEquals(WidgetType.Dialog, widget.type)
 
-        assertEquals(3, widget.attributes.size)
+        assertEquals(4, widget.attributes.size)
         assertEquals(dialog.title, widget.attributes["title"])
         assertEquals(dialog.message, widget.attributes["message"])
         assertEquals(dialog.type, widget.attributes["type"])
+
+        val actions = (widget.attributes["actions"]) as List<Widget>
+        assertEquals(2, actions.size)
+        assertEquals("a", actions[0].attributes["icon"])
+        assertEquals(WidgetType.IconButton, actions[0].type)
+        assertEquals("b", actions[1].attributes["icon"])
+        assertEquals(WidgetType.IconButton, actions[1].type)
 
         assertNull(widget.action)
 
