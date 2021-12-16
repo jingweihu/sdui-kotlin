@@ -12,7 +12,6 @@ internal class MoneyWithKeyboardTest {
             moneyColor = "1111",
             name = "foo",
             maxLength = 7,
-            deleteText = "xxx",
             keyboardButtonSize = 90.0,
             currency = "XAF",
             value = 10000,
@@ -25,12 +24,11 @@ internal class MoneyWithKeyboardTest {
         assertEquals(WidgetType.MoneyWithKeyboard, widget.type)
         assertNull(widget.action)
 
-        assertEquals(9, widget.attributes.size)
+        assertEquals(8, widget.attributes.size)
         assertEquals(input.value, widget.attributes["value"])
         assertEquals(input.moneyColor, widget.attributes["moneyColor"])
         assertEquals(input.keyboardColor, widget.attributes["keyboardColor"])
         assertEquals(input.name, widget.attributes["name"])
-        assertEquals(input.deleteText, widget.attributes["deleteText"])
         assertEquals(input.maxLength, widget.attributes["maxLength"])
         assertEquals(input.currency, widget.attributes["currency"])
         assertEquals(input.keyboardButtonSize, widget.attributes["keyboardButtonSize"])

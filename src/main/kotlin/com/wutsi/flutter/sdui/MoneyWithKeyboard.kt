@@ -9,7 +9,6 @@ data class MoneyWithKeyboard(
     val currency: String? = null,
     val keyboardColor: String? = null,
     val moneyColor: String? = null,
-    val deleteText: String? = null,
     val keyboardButtonSize: Double? = null,
     val numberFormat: String? = null
 
@@ -20,7 +19,6 @@ data class MoneyWithKeyboard(
             "name" to name,
             "keyboardColor" to keyboardColor,
             "moneyColor" to moneyColor,
-            "deleteText" to deleteText,
             "maxLength" to maxLength,
             "value" to value,
             "currency" to currency,

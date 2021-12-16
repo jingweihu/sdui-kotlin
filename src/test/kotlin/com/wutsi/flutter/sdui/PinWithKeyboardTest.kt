@@ -16,7 +16,6 @@ internal class PinWithKeyboardTest {
                 type = Prompt
             ),
             maxLength = 7,
-            deleteText = "xxx",
             pinSize = 11.0,
             keyboardButtonSize = 90.0
         )
@@ -26,11 +25,10 @@ internal class PinWithKeyboardTest {
         assertEquals(WidgetType.PinWithKeyboard, widget.type)
         assertEquals(button.action, widget.action)
 
-        assertEquals(7, widget.attributes.size)
+        assertEquals(6, widget.attributes.size)
         assertEquals(button.hideText, widget.attributes["hideText"])
         assertEquals(button.color, widget.attributes["color"])
         assertEquals(button.name, widget.attributes["name"])
-        assertEquals(button.deleteText, widget.attributes["deleteText"])
         assertEquals(button.maxLength, widget.attributes["maxLength"])
         assertEquals(button.pinSize, widget.attributes["pinSize"])
         assertEquals(button.keyboardButtonSize, widget.attributes["keyboardButtonSize"])
