@@ -4,7 +4,7 @@ import com.wutsi.flutter.sdui.enums.WidgetType
 
 data class DropdownButton(
     val name: String,
-    val value: String,
+    val value: String? = null,
     val hint: String? = null,
     val required: Boolean? = null,
     val children: List<DropdownMenuItem> = emptyList()
