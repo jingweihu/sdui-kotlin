@@ -6,6 +6,7 @@ import com.wutsi.flutter.sdui.enums.WidgetType
 data class ListView(
     val direction: Axis? = null,
     val separator: Boolean? = null,
+    val separatorColor: String? = null,
     val children: List<WidgetAware>
 ) : WidgetAware {
     override fun toWidget() = Widget(
@@ -13,6 +14,7 @@ data class ListView(
         attributes = mapOf(
             "direction" to direction,
             "separator" to separator,
+            "separatorColor" to separatorColor,
         ),
         children = children.map { it.toWidget() }
     )

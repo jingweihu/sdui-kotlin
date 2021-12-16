@@ -11,7 +11,8 @@ internal class ListViewTest {
         val group = ListView(
             direction = Axis.Horizontal,
             separator = true,
-            children = listOf(Radio("1"), Radio("2"))
+            children = listOf(Radio("1"), Radio("2")),
+            separatorColor = "xxx"
         )
 
         val widget = group.toWidget()
@@ -19,9 +20,10 @@ internal class ListViewTest {
         kotlin.test.assertEquals(WidgetType.ListView, widget.type)
         kotlin.test.assertNull(widget.action)
 
-        kotlin.test.assertEquals(2, widget.attributes.size)
+        kotlin.test.assertEquals(3, widget.attributes.size)
         kotlin.test.assertEquals(group.direction, widget.attributes["direction"])
         kotlin.test.assertEquals(group.separator, widget.attributes["separator"])
+        kotlin.test.assertEquals(group.separatorColor, widget.attributes["separatorColor"])
 
         kotlin.test.assertEquals(2, widget.children.size)
     }
