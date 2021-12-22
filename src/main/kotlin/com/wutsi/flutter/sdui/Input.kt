@@ -20,8 +20,8 @@ class Input(
     val countries: List<String>? = null,
     val minLength: Int = 0,
     val action: Action? = null,
-    val uploadUrl: String,
-    val imageSource: ImageSource
+    val uploadUrl: String? = null,
+    val imageSource: ImageSource? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Input,
