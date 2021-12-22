@@ -21,7 +21,10 @@ class Input(
     val minLength: Int = 0,
     val action: Action? = null,
     val uploadUrl: String? = null,
-    val imageSource: ImageSource? = null
+    val imageSource: ImageSource? = null,
+    val imageMaxWidth: Int? = null,
+    val imageMaxHeight: Int? = null,
+    val videoMaxDuration: Int? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Input,
@@ -41,7 +44,10 @@ class Input(
             "minLength" to minLength,
             "countries" to countries,
             "uploadUrl" to uploadUrl,
-            "imageSource" to imageSource
+            "imageSource" to imageSource,
+            "videoMaxDuration" to videoMaxDuration,
+            "imageMaxHeight" to imageMaxHeight,
+            "imageMaxWidth" to imageMaxWidth
         ),
         action = action
     )
