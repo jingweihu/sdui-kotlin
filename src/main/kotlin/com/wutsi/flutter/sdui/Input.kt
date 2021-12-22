@@ -1,5 +1,6 @@
 package com.wutsi.flutter.sdui
 
+import com.wutsi.flutter.sdui.enums.ImageSource
 import com.wutsi.flutter.sdui.enums.InputType
 import com.wutsi.flutter.sdui.enums.WidgetType.Input
 
@@ -18,7 +19,9 @@ class Input(
     val maxLength: Int? = null,
     val countries: List<String>? = null,
     val minLength: Int = 0,
-    val action: Action? = null
+    val action: Action? = null,
+    val uploadUrl: String,
+    val imageSource: ImageSource
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Input,
@@ -36,7 +39,9 @@ class Input(
             "maxLines" to maxLines,
             "maxLength" to maxLength,
             "minLength" to minLength,
-            "countries" to countries
+            "countries" to countries,
+            "uploadUrl" to uploadUrl,
+            "imageSource" to imageSource
         ),
         action = action
     )
