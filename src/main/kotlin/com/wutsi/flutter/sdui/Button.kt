@@ -13,6 +13,8 @@ class Button(
     val stretched: Boolean? = null,
     val icon: String? = null,
     val iconSize: Double? = null,
+    val iconColor: String? = null,
+    val color: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Button,
@@ -24,7 +26,9 @@ class Button(
             "type" to type,
             "stretched" to stretched,
             "icon" to icon,
-            "iconSize" to iconSize
+            "iconSize" to iconSize,
+            "iconColor" to iconColor,
+            "color" to color
         )
     )
 }
