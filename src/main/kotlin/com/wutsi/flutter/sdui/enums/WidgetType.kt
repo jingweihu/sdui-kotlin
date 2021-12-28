@@ -4,6 +4,7 @@ enum class WidgetType {
     AppBar,
     Button,
     Camera,
+    Center,
     CircleAvatar,
     Column,
     Container,
