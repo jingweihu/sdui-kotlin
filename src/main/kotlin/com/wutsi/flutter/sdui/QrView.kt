@@ -3,10 +3,12 @@ package com.wutsi.flutter.sdui
 import com.wutsi.flutter.sdui.enums.WidgetType
 
 class QrView(
-    val action: Action? = null,
+    val submitUrl: String,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.QrView,
-        action = action,
+        attributes = mapOf(
+            "submitUrl" to submitUrl
+        )
     )
 }
