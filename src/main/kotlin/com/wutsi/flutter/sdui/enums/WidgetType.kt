@@ -30,6 +30,7 @@ enum class WidgetType {
     PageView,
     PinWithKeyboard,
     QrImage,
+    QrView,
     Row,
     Radio,
     RadioGroup,
