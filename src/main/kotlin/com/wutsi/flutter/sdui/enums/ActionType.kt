@@ -5,5 +5,6 @@ enum class ActionType {
     Route,
     Command,
     Prompt,
-    Share
+    Share,
+    Navigate
 }
