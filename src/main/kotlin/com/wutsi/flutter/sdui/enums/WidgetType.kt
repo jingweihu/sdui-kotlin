@@ -40,4 +40,5 @@ enum class WidgetType {
     TabBarView,
     Text,
     Screen,
+    Wrap,
 }
