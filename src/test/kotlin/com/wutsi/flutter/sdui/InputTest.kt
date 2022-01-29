@@ -33,7 +33,9 @@ internal class InputTest {
             uploadUrl = "http://www.google.ca",
             imageMaxHeight = 1,
             imageMaxWidth = 7,
-            videoMaxDuration = 100
+            videoMaxDuration = 100,
+            prefix = "foo",
+            suffix = "BAR"
         )
 
         val widget = input.toWidget()
@@ -43,7 +45,7 @@ internal class InputTest {
         assertEquals(input.action?.url, widget.action?.url)
         assertEquals(input.action?.type, widget.action?.type)
 
-        assertEquals(19, widget.attributes.size)
+        assertEquals(21, widget.attributes.size)
         assertEquals(input.id, widget.attributes["id"])
         assertEquals(input.name, widget.attributes["name"])
         assertEquals(input.value, widget.attributes["value"])
@@ -63,6 +65,8 @@ internal class InputTest {
         assertEquals(input.imageMaxHeight, widget.attributes["imageMaxHeight"])
         assertEquals(input.imageMaxWidth, widget.attributes["imageMaxWidth"])
         assertEquals(input.videoMaxDuration, widget.attributes["videoMaxDuration"])
+        assertEquals(input.prefix, widget.attributes["prefix"])
+        assertEquals(input.suffix, widget.attributes["suffix"])
 
         assertEquals(0, widget.children.size)
     }
