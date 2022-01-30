@@ -1,10 +1,10 @@
 package com.wutsi.flutter.sdui
 
+import com.wutsi.flutter.sdui.enums.ActionType
 import com.wutsi.flutter.sdui.enums.Alignment.BottomCenter
 import com.wutsi.flutter.sdui.enums.WidgetType
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertNull
 
 internal class ContainerTest {
     @Test
@@ -20,13 +20,14 @@ internal class ContainerTest {
             child = Page(url = "xxx"),
             width = 111.0,
             height = 22.0,
-            backgroundImageUrl = "https://www.img.com/1.png"
+            backgroundImageUrl = "https://www.img.com/1.png",
+            action = Action(type = ActionType.Route)
         )
 
         val widget = container.toWidget()
 
         assertEquals(WidgetType.Container, widget.type)
-        assertNull(widget.action)
+        assertEquals(container.action, widget.action)
 
         assertEquals(10, widget.attributes.size)
         assertEquals(container.padding, widget.attributes["padding"])
