@@ -28,6 +28,7 @@ enum class WidgetType {
     MoneyWithSlider,
     Page,
     PageView,
+    PhotoView,
     PinWithKeyboard,
     QrImage,
     QrView,
