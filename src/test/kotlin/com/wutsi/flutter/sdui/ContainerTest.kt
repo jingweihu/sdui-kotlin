@@ -18,6 +18,9 @@ internal class ContainerTest {
             borderRadius = 3.0,
             margin = 4.0,
             child = Page(url = "xxx"),
+            width = 111.0,
+            height = 22.0,
+            backgroundImageUrl = "https://www.img.com/1.png"
         )
 
         val widget = container.toWidget()
@@ -25,13 +28,16 @@ internal class ContainerTest {
         assertEquals(WidgetType.Container, widget.type)
         assertNull(widget.action)
 
-        assertEquals(7, widget.attributes.size)
+        assertEquals(10, widget.attributes.size)
         assertEquals(container.padding, widget.attributes["padding"])
         assertEquals(container.alignment, widget.attributes["alignment"])
         assertEquals(container.background, widget.attributes["background"])
         assertEquals(container.border, widget.attributes["border"])
         assertEquals(container.borderColor, widget.attributes["borderColor"])
         assertEquals(container.margin, widget.attributes["margin"])
+        assertEquals(container.width, widget.attributes["width"])
+        assertEquals(container.height, widget.attributes["height"])
+        assertEquals(container.backgroundImageUrl, widget.attributes["backgroundImageUrl"])
 
         assertEquals(1, widget.children.size)
     }
