@@ -7,5 +7,6 @@ data class Widget(
     val attributes: Map<String, Any?> = emptyMap(),
     val children: List<Widget> = emptyList(),
     val action: Action? = null,
-    val appBar: Widget? = null
+    val appBar: Widget? = null,
+    val floatingActionButton: Widget? = null,
 )

@@ -31,6 +31,9 @@ internal class ScreenTest {
                 title = "Yo",
                 actions = listOf(IconButton("1"), IconButton("2"))
             ),
+            floatingActionButton = Button(
+                id = "1"
+            )
         )
 
         val widget = screen.toWidget()
@@ -44,6 +47,8 @@ internal class ScreenTest {
         assertEquals(screen.backgroundColor, widget.attributes["backgroundColor"])
 
         assertEquals(screen.appBar?.title, widget.appBar?.attributes?.get("title"))
+
+        assertEquals(screen.floatingActionButton?.id, widget.floatingActionButton?.attributes?.get("id"))
 
         assertEquals(1, widget.children.size)
         assertEquals(widget1, widget.children[0])
