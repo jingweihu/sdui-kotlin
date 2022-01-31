@@ -10,7 +10,7 @@ internal class SingleChildScrollViewTest {
     @Test
     fun toWidget() {
         val obj = SingleChildScrollView(
-            children = listOf(Container(), Container()),
+            child = Container(),
             padding = 10.0,
             primary = true,
             scrollDirection = Axis.Horizontal,
@@ -28,6 +28,6 @@ internal class SingleChildScrollViewTest {
         assertEquals(obj.reverse, widget.attributes["reverse"])
         assertEquals(obj.scrollDirection, widget.attributes["scrollDirection"])
 
-        assertEquals(2, widget.children.size)
+        assertEquals(1, widget.children.size)
     }
 }
