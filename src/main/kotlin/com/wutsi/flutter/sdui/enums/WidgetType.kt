@@ -2,6 +2,7 @@ package com.wutsi.flutter.sdui.enums
 
 enum class WidgetType {
     AppBar,
+    AspectRatio,
     Button,
     Camera,
     Center,

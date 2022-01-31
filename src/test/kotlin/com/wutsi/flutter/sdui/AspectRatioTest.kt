@@ -5,14 +5,15 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
 
-internal class CenterTest {
+internal class AspectRatioTest {
     @Test
     fun toWidget() {
-        val obj = Center()
+        val obj = AspectRatio(3.0 / 2.0)
 
         val widget = obj.toWidget()
-        assertEquals(WidgetType.Center, widget.type)
+        assertEquals(WidgetType.AspectRatio, widget.type)
         assertNull(widget.action)
-        assertEquals(0, widget.attributes.size)
+        assertEquals(1, widget.attributes.size)
+        assertEquals(obj.aspectRatio, widget.attributes["aspectRatio"])
     }
 }

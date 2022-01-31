@@ -19,7 +19,8 @@ internal class TextTest {
             size = 12.0,
             alignment = Center,
             overflow = Clip,
-            decoration = Strikethrough
+            decoration = Strikethrough,
+            maxLines = 3
         )
 
         val widget = text.toWidget()
@@ -28,7 +29,7 @@ internal class TextTest {
 
         assertNull(widget.action)
 
-        assertEquals(8, widget.attributes.size)
+        assertEquals(9, widget.attributes.size)
         assertEquals(text.caption, widget.attributes["caption"])
         assertEquals(text.color, widget.attributes["color"])
         assertEquals(text.bold, widget.attributes["bold"])
@@ -37,6 +38,7 @@ internal class TextTest {
         assertEquals(text.alignment, widget.attributes["alignment"])
         assertEquals(text.overflow, widget.attributes["overflow"])
         assertEquals(text.decoration, widget.attributes["decoration"])
+        assertEquals(text.maxLines, widget.attributes["maxLines"])
 
         assertEquals(0, widget.children.size)
     }

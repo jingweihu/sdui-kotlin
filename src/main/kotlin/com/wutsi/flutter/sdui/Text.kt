@@ -14,6 +14,7 @@ class Text(
     val alignment: TextAlignment? = null,
     val overflow: TextOverflow? = null,
     val decoration: TextDecoration? = null,
+    val maxLines: Int? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Text,
@@ -25,7 +26,8 @@ class Text(
             "size" to size,
             "alignment" to alignment,
             "overflow" to overflow,
-            "decoration" to decoration
+            "decoration" to decoration,
+            "maxLines" to maxLines
         )
     )
 }
