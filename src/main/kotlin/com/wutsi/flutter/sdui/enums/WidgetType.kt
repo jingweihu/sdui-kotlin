@@ -13,6 +13,7 @@ enum class WidgetType {
     Divider,
     DropdownButton,
     DropdownMenuItem,
+    Expanded,
     Flexible,
     Form,
     GridView,
