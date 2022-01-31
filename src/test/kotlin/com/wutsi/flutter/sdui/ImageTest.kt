@@ -1,5 +1,6 @@
 package com.wutsi.flutter.sdui
 
+import com.wutsi.flutter.sdui.enums.BoxFit
 import com.wutsi.flutter.sdui.enums.WidgetType
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
@@ -11,7 +12,8 @@ internal class ImageTest {
         val image = Image(
             url = "http://img.com/1.png",
             width = 100.0,
-            height = 200.0
+            height = 200.0,
+            fit = BoxFit.contain
         )
 
         val widget = image.toWidget()
@@ -19,10 +21,11 @@ internal class ImageTest {
         assertEquals(WidgetType.Image, widget.type)
         assertNull(widget.action)
 
-        assertEquals(3, widget.attributes.size)
+        assertEquals(4, widget.attributes.size)
         assertEquals(image.url, widget.attributes["url"])
         assertEquals(image.width, widget.attributes["width"])
         assertEquals(image.height, widget.attributes["height"])
+        assertEquals(image.fit, widget.attributes["fit"])
 
         assertEquals(0, widget.children.size)
     }
