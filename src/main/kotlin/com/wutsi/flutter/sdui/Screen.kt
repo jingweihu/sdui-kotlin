@@ -8,7 +8,7 @@ class Screen(
     val safe: Boolean = false,
     val child: WidgetAware? = null,
     val backgroundColor: String? = null,
-    val floatingActionButton: Button? = null,
+    val floatingActionButton: WidgetAware? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Screen,

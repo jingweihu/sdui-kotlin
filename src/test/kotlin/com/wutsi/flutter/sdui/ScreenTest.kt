@@ -48,7 +48,7 @@ internal class ScreenTest {
 
         assertEquals(screen.appBar?.title, widget.appBar?.attributes?.get("title"))
 
-        assertEquals(screen.floatingActionButton?.id, widget.floatingActionButton?.attributes?.get("id"))
+        assertEquals("1", widget.floatingActionButton?.attributes?.get("id"))
 
         assertEquals(1, widget.children.size)
         assertEquals(widget1, widget.children[0])
