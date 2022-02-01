@@ -5,6 +5,7 @@ enum class WidgetType {
     AspectRatio,
     Button,
     Camera,
+    CarouselSlider,
     Center,
     CircleAvatar,
     Column,
