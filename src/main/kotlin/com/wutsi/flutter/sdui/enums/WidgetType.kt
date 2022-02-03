@@ -38,6 +38,7 @@ enum class WidgetType {
     Row,
     Radio,
     RadioGroup,
+    SearchableDropdown,
     Spacer,
     Tab,
     TabBar,
