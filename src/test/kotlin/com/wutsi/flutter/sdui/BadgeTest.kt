@@ -26,7 +26,7 @@ internal class BadgeTest {
 
         assertEquals(WidgetType.Badge, widget.type)
 
-        assertEquals(4, widget.attributes.size)
+        assertEquals(5, widget.attributes.size)
         assertEquals(obj.shape, widget.attributes["shape"])
         assertEquals(obj.color, widget.attributes["color"])
         assertEquals(obj.borderRadius, widget.attributes["borderRadius"])
