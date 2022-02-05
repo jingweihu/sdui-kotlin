@@ -7,7 +7,8 @@ data class DropdownButton(
     val value: String? = null,
     val hint: String? = null,
     val required: Boolean? = null,
-    val children: List<DropdownMenuItem> = emptyList()
+    val children: List<DropdownMenuItem> = emptyList(),
+    val action: Action? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.DropdownButton,
@@ -17,6 +18,7 @@ data class DropdownButton(
             "hint" to hint,
             "required" to required
         ),
-        children = children.map { it.toWidget() }
+        children = children.map { it.toWidget() },
+        action = action
     )
 }
