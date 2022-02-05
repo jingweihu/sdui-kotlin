@@ -3,6 +3,7 @@ package com.wutsi.flutter.sdui.enums
 enum class WidgetType {
     AppBar,
     AspectRatio,
+    Badge,
     Button,
     Camera,
     CarouselSlider,
@@ -33,6 +34,7 @@ enum class WidgetType {
     PageView,
     PhotoView,
     PinWithKeyboard,
+    Positioned,
     QrImage,
     QrView,
     Row,
@@ -40,6 +42,7 @@ enum class WidgetType {
     RadioGroup,
     SearchableDropdown,
     Spacer,
+    Stack,
     Tab,
     TabBar,
     TabBarView,

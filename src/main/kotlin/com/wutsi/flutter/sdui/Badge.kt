@@ -1,0 +1,26 @@
+package com.wutsi.flutter.sdui
+
+import com.wutsi.flutter.sdui.enums.BadgePosition
+import com.wutsi.flutter.sdui.enums.BadgeShape
+import com.wutsi.flutter.sdui.enums.WidgetType
+
+class Badge(
+    val shape: BadgeShape? = null,
+    val position: BadgePosition? = null,
+    val color: String? = null,
+    val borderRadius: Double? = null,
+    val elevation: Double? = null,
+    val child: WidgetAware? = null,
+) : WidgetAware {
+    override fun toWidget() = Widget(
+        type = WidgetType.Badge,
+        children = if (child == null) emptyList() else listOf(child.toWidget()),
+        attributes = mapOf(
+            "shape" to shape,
+            "position" to position,
+            "color" to color,
+            "borderRadius" to borderRadius,
+            "elevation" to elevation
+        )
+    )
+}
