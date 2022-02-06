@@ -1,7 +1,8 @@
 package com.wutsi.flutter.sdui
 
 import com.wutsi.flutter.sdui.enums.WidgetType
-import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
 
 internal class ChipTest {
@@ -12,18 +13,22 @@ internal class ChipTest {
             child = Text("Yo"),
             color = "fff",
             padding = 10.0,
+            elevation = 1.0,
+            shadowColor = "xxx"
         )
 
         val widget = obj.toWidget()
 
-        Assertions.assertNull(widget.action)
+        assertNull(widget.action)
 
-        Assertions.assertEquals(WidgetType.Chip, widget.type)
+        assertEquals(WidgetType.Chip, widget.type)
 
-        Assertions.assertEquals(2, widget.attributes.size)
-        Assertions.assertEquals(obj.padding, widget.attributes["padding"])
-        Assertions.assertEquals(obj.color, widget.attributes["color"])
+        assertEquals(4, widget.attributes.size)
+        assertEquals(obj.padding, widget.attributes["padding"])
+        assertEquals(obj.color, widget.attributes["color"])
+        assertEquals(obj.elevation, widget.attributes["elevation"])
+        assertEquals(obj.shadowColor, widget.attributes["shadowColor"])
 
-        Assertions.assertEquals(1, widget.children.size)
+        assertEquals(1, widget.children.size)
     }
 }
