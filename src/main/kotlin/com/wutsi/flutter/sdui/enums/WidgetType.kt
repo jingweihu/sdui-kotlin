@@ -9,6 +9,7 @@ enum class WidgetType {
     CarouselSlider,
     Center,
     CircleAvatar,
+    Chip,
     Column,
     Container,
     DefaultTabController,
