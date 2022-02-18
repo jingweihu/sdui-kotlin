@@ -15,7 +15,9 @@ internal class DropdownButtonTest {
             required = true,
             hint = "foo bar",
             children = listOf(DropdownMenuItem("y", "x")),
-            action = action
+            action = action,
+            stretched = true,
+            outlinedBorder = true
         )
 
         val widget = item.toWidget()
@@ -23,11 +25,13 @@ internal class DropdownButtonTest {
         assertEquals(DropdownButton, widget.type)
         assertEquals(action, widget.action)
 
-        assertEquals(4, widget.attributes.size)
+        assertEquals(6, widget.attributes.size)
         assertEquals(item.name, widget.attributes["name"])
         assertEquals(item.value, widget.attributes["value"])
         assertEquals(item.required, widget.attributes["required"])
         assertEquals(item.hint, widget.attributes["hint"])
+        assertEquals(item.stretched, widget.attributes["stretched"])
+        assertEquals(item.outlinedBorder, widget.attributes["outlinedBorder"])
 
         assertEquals(1, widget.children.size)
     }
