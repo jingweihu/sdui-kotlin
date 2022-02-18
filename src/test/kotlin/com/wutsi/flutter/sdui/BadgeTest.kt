@@ -17,7 +17,11 @@ internal class BadgeTest {
             color = "fff",
             borderRadius = 3.0,
             position = BadgePosition.BottomEnd,
-            elevation = 1.0
+            elevation = 1.0,
+            backgroundColor = "eee",
+            caption = "foo",
+            fontSize = 55.0,
+            padding = 11.0
         )
 
         val widget = obj.toWidget()
@@ -26,12 +30,16 @@ internal class BadgeTest {
 
         assertEquals(WidgetType.Badge, widget.type)
 
-        assertEquals(5, widget.attributes.size)
+        assertEquals(9, widget.attributes.size)
         assertEquals(obj.shape, widget.attributes["shape"])
         assertEquals(obj.color, widget.attributes["color"])
         assertEquals(obj.borderRadius, widget.attributes["borderRadius"])
         assertEquals(obj.position, widget.attributes["position"])
         assertEquals(obj.elevation, widget.attributes["elevation"])
+        assertEquals(obj.backgroundColor, widget.attributes["backgroundColor"])
+        assertEquals(obj.caption, widget.attributes["caption"])
+        assertEquals(obj.fontSize, widget.attributes["fontSize"])
+        assertEquals(obj.padding, widget.attributes["padding"])
 
         assertEquals(1, widget.children.size)
     }

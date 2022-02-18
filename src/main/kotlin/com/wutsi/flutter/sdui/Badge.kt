@@ -8,8 +8,12 @@ class Badge(
     val shape: BadgeShape? = null,
     val position: BadgePosition? = null,
     val color: String? = null,
+    val backgroundColor: String? = null,
+    val caption: String? = null,
     val borderRadius: Double? = null,
     val elevation: Double? = null,
+    val padding: Double? = null,
+    val fontSize: Double? = null,
     val child: WidgetAware? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
@@ -19,8 +23,12 @@ class Badge(
             "shape" to shape,
             "position" to position,
             "color" to color,
+            "backgroundColor" to backgroundColor,
+            "caption" to caption,
             "borderRadius" to borderRadius,
-            "elevation" to elevation
+            "elevation" to elevation,
+            "fontSize" to fontSize,
+            "padding" to padding,
         )
     )
 }

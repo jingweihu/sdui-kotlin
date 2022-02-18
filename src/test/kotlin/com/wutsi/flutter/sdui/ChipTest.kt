@@ -10,11 +10,13 @@ internal class ChipTest {
     @Test
     fun toWidget() {
         val obj = Chip(
-            child = Text("Yo"),
+            caption = "yo",
+            backgroundColor = "eee",
             color = "fff",
             padding = 10.0,
             elevation = 1.0,
-            shadowColor = "xxx"
+            shadowColor = "xxx",
+            fontSize = 55.0
         )
 
         val widget = obj.toWidget()
@@ -23,12 +25,15 @@ internal class ChipTest {
 
         assertEquals(WidgetType.Chip, widget.type)
 
-        assertEquals(4, widget.attributes.size)
+        assertEquals(7, widget.attributes.size)
         assertEquals(obj.padding, widget.attributes["padding"])
         assertEquals(obj.color, widget.attributes["color"])
         assertEquals(obj.elevation, widget.attributes["elevation"])
         assertEquals(obj.shadowColor, widget.attributes["shadowColor"])
+        assertEquals(obj.backgroundColor, widget.attributes["backgroundColor"])
+        assertEquals(obj.caption, widget.attributes["caption"])
+        assertEquals(obj.fontSize, widget.attributes["fontSize"])
 
-        assertEquals(1, widget.children.size)
+        assertEquals(0, widget.children.size)
     }
 }
