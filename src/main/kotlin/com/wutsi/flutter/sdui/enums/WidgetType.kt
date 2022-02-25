@@ -14,6 +14,7 @@ enum class WidgetType {
     Container,
     DefaultTabController,
     Dialog,
+    DynamicWidget,
     Divider,
     DropdownButton,
     DropdownMenuItem,
