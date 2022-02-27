@@ -4,6 +4,8 @@ enum class WidgetType {
     AppBar,
     AspectRatio,
     Badge,
+    BottomNavigationBar,
+    BottomNavigationBarItem,
     Button,
     Camera,
     CarouselSlider,

@@ -9,6 +9,7 @@ class Screen(
     val child: WidgetAware? = null,
     val backgroundColor: String? = null,
     val floatingActionButton: WidgetAware? = null,
+    val bottomNavigationBar: BottomNavigationBar? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Screen,
@@ -19,6 +20,7 @@ class Screen(
             "backgroundColor" to backgroundColor,
         ),
         appBar = appBar?.toWidget(),
-        floatingActionButton = floatingActionButton?.toWidget()
+        floatingActionButton = floatingActionButton?.toWidget(),
+        bottomNavigationBar = bottomNavigationBar?.toWidget()
     )
 }

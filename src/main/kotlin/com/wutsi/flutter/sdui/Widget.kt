@@ -9,4 +9,5 @@ data class Widget(
     val action: Action? = null,
     val appBar: Widget? = null,
     val floatingActionButton: Widget? = null,
+    val bottomNavigationBar: Widget? = null
 )
