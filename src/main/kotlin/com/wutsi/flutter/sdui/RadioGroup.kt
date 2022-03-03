@@ -7,7 +7,7 @@ data class RadioGroup(
     val separatorColor: String? = null,
     val name: String,
     val value: String? = null,
-    val children: List<Radio>,
+    val children: List<WidgetAware>,
     val action: Action? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
