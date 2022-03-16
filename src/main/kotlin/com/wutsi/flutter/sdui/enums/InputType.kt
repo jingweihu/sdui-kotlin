@@ -10,5 +10,6 @@ enum class InputType {
     Time,
     Url,
     Image,
-    Video
+    Video,
+    File
 }
