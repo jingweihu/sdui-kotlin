@@ -21,6 +21,7 @@ enum class WidgetType {
     DropdownButton,
     DropdownMenuItem,
     Expanded,
+    ExpandablePanel,
     Flexible,
     Form,
     GridView,
