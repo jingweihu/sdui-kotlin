@@ -3,7 +3,7 @@ package com.wutsi.flutter.sdui
 import com.wutsi.flutter.sdui.enums.WidgetType
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 
 internal class ExpandablePanelTest {
 
@@ -25,6 +25,6 @@ internal class ExpandablePanelTest {
         assertEquals(1, widget.children.size)
         assertEquals(WidgetType.Text, widget.children[0].type)
 
-        assertNotNull(widget.action)
+        assertNull(widget.action)
     }
 }
