@@ -26,7 +26,8 @@ class Input(
     val imageMaxHeight: Int? = null,
     val videoMaxDuration: Int? = null,
     val prefix: String? = null,
-    val suffix: String? = null
+    val suffix: String? = null,
+    val initialCountry: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Input,
@@ -52,6 +53,7 @@ class Input(
             "imageMaxWidth" to imageMaxWidth,
             "prefix" to prefix,
             "suffix" to suffix,
+            "initialCountry" to initialCountry,
         ),
         action = action
     )
