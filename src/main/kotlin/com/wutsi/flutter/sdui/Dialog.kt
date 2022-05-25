@@ -5,7 +5,7 @@ import com.wutsi.flutter.sdui.enums.WidgetType.Dialog
 
 class Dialog(
     val type: DialogType = DialogType.Alert,
-    val title: String = "",
+    val title: String? = null,
     val message: String? = null,
     val actions: List<WidgetAware>? = null,
 ) : WidgetAware {
