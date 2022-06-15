@@ -52,6 +52,7 @@ enum class WidgetType {
     TabBar,
     TabBarView,
     Text,
+    Timeout,
     SingleChildScrollView,
     Screen,
     Wrap,
