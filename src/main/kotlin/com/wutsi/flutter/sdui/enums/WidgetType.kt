@@ -35,6 +35,7 @@ enum class WidgetType {
     MoneyText,
     MoneyWithKeyboard,
     MoneyWithSlider,
+    Noop,
     Page,
     PageView,
     PhotoView,
