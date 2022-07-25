@@ -6,6 +6,7 @@ import com.wutsi.flutter.sdui.enums.WidgetType.PageView
 class PageView(
     val id: String? = null,
     val direction: Axis = Axis.Horizontal,
+    val scrollOnUserInput: Boolean? = null,
     val children: List<Page>
 ) : WidgetAware {
     override fun toWidget() = Widget(
@@ -14,6 +15,7 @@ class PageView(
         attributes = mapOf(
             "id" to id,
             "direction" to direction,
+            "scrollOnUserInput" to scrollOnUserInput
         )
     )
 }
