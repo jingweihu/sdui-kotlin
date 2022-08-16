@@ -7,11 +7,13 @@ data class SearchableDropdown(
     val value: String? = null,
     val hint: String? = null,
     val required: Boolean? = null,
-    val children: List<DropdownMenuItem> = emptyList()
+    val children: List<DropdownMenuItem> = emptyList(),
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.SearchableDropdown,
         attributes = mapOf(
+            "id" to id,
             "name" to name,
             "value" to value,
             "hint" to hint,

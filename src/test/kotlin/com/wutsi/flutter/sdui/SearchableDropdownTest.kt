@@ -5,11 +5,12 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
 
-internal class SearchableButtonTest {
+internal class SearchableDropdownTest {
 
     @Test
     fun toWidget() {
         val item = SearchableDropdown(
+            id = "111",
             name = "Yo",
             value = "man",
             required = true,
@@ -22,7 +23,8 @@ internal class SearchableButtonTest {
         assertEquals(WidgetType.SearchableDropdown, widget.type)
         assertNull(widget.action)
 
-        assertEquals(4, widget.attributes.size)
+        assertEquals(5, widget.attributes.size)
+        assertEquals(item.id, widget.attributes["id"])
         assertEquals(item.name, widget.attributes["name"])
         assertEquals(item.value, widget.attributes["value"])
         assertEquals(item.required, widget.attributes["required"])

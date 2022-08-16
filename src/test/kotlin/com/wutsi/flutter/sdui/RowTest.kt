@@ -15,7 +15,8 @@ internal class RowTest {
             children = listOf(Container(), Container()),
             mainAxisAlignment = center,
             crossAxisAlignment = baseline,
-            mainAxisSize = max
+            mainAxisSize = max,
+            id = "111"
         )
 
         val widget = obj.toWidget()
@@ -23,7 +24,8 @@ internal class RowTest {
         assertEquals(WidgetType.Row, widget.type)
         assertNull(widget.action)
 
-        assertEquals(3, widget.attributes.size)
+        assertEquals(4, widget.attributes.size)
+        assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.mainAxisAlignment, widget.attributes["mainAxisAlignment"])
         assertEquals(obj.crossAxisAlignment, widget.attributes["crossAxisAlignment"])
         assertEquals(obj.mainAxisSize, widget.attributes["mainAxisSize"])

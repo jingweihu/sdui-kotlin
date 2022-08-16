@@ -12,6 +12,7 @@ internal class BadgeTest {
     @Test
     fun toWidget() {
         val obj = Badge(
+            id = "111",
             child = Container(),
             shape = BadgeShape.Circle,
             color = "fff",
@@ -30,7 +31,8 @@ internal class BadgeTest {
 
         assertEquals(WidgetType.Badge, widget.type)
 
-        assertEquals(9, widget.attributes.size)
+        assertEquals(10, widget.attributes.size)
+        assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.shape, widget.attributes["shape"])
         assertEquals(obj.color, widget.attributes["color"])
         assertEquals(obj.borderRadius, widget.attributes["borderRadius"])

@@ -13,7 +13,8 @@ internal class RadioTest {
             caption = "foo",
             subCaption = "bar",
             value = "1",
-            groupValue = "2"
+            groupValue = "2",
+            id = "1111"
         )
 
         val widget = radio.toWidget()
@@ -21,7 +22,8 @@ internal class RadioTest {
         assertEquals(WidgetType.Radio, widget.type)
         assertNull(widget.action)
 
-        assertEquals(4, widget.attributes.size)
+        assertEquals(5, widget.attributes.size)
+        assertEquals(radio.id, widget.attributes["id"])
         assertEquals(radio.caption, widget.attributes["caption"])
         assertEquals(radio.subCaption, widget.attributes["subCaption"])
         assertEquals(radio.value, widget.attributes["value"])

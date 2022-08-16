@@ -10,6 +10,7 @@ internal class IconButtonTest {
     @Test
     fun toWidget() {
         val button = IconButton(
+            id = "111",
             icon = "0erf",
             size = 100.0,
             color = "ff0000",
@@ -21,7 +22,8 @@ internal class IconButtonTest {
         assertEquals(WidgetType.IconButton, widget.type)
         assertNull(widget.action)
 
-        assertEquals(4, widget.attributes.size)
+        assertEquals(5, widget.attributes.size)
+        assertEquals(button.id, widget.attributes["id"])
         assertEquals(button.icon, widget.attributes["icon"])
         assertEquals(button.size, widget.attributes["size"])
         assertEquals(button.color, widget.attributes["color"])

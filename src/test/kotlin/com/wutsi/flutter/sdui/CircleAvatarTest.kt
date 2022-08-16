@@ -10,6 +10,7 @@ internal class CircleAvatarTest {
     @Test
     fun toWidget() {
         val obj = CircleAvatar(
+            id = "111",
             radius = 30.0,
             backgroundColor = "xxx",
             child = Container(),
@@ -21,8 +22,9 @@ internal class CircleAvatarTest {
         assertEquals(WidgetType.CircleAvatar, widget.type)
         assertEquals(obj.action, widget.action)
 
-        assertEquals(2, widget.attributes.size)
+        assertEquals(3, widget.attributes.size)
         assertEquals(obj.radius, widget.attributes["radius"])
+        assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.backgroundColor, widget.attributes["backgroundColor"])
 
         assertEquals(1, widget.children.size)

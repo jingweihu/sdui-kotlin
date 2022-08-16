@@ -8,11 +8,13 @@ data class RadioGroup(
     val name: String,
     val value: String? = null,
     val children: List<WidgetAware>,
-    val action: Action? = null
+    val action: Action? = null,
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.RadioGroup,
         attributes = mapOf(
+            "id" to id,
             "name" to name,
             "value" to value,
             "separator" to separator,

@@ -15,10 +15,12 @@ class Text(
     val overflow: TextOverflow? = null,
     val decoration: TextDecoration? = null,
     val maxLines: Int? = null,
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Text,
         attributes = mapOf(
+            "id" to id,
             "caption" to caption,
             "color" to color,
             "bold" to bold,

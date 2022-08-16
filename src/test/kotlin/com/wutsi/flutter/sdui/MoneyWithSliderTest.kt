@@ -1,6 +1,7 @@
 package com.wutsi.flutter.sdui
 
 import com.wutsi.flutter.sdui.enums.WidgetType
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
@@ -16,7 +17,8 @@ internal class MoneyWithSliderTest {
             currency = "XAF",
             value = 10000,
             sliderColor = "2222",
-            numberFormat = "xxx"
+            numberFormat = "xxx",
+            id = "222"
         )
 
         val widget = input.toWidget()
@@ -24,7 +26,8 @@ internal class MoneyWithSliderTest {
         assertEquals(WidgetType.MoneyWithSlider, widget.type)
         assertNull(widget.action)
 
-        assertEquals(8, widget.attributes.size)
+        assertEquals(9, widget.attributes.size)
+        Assertions.assertEquals(input.id, widget.attributes["id"])
         assertEquals(input.value, widget.attributes["value"])
         assertEquals(input.moneyColor, widget.attributes["moneyColor"])
         assertEquals(input.sliderColor, widget.attributes["sliderColor"])

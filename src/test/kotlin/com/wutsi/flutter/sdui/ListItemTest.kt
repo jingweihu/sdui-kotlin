@@ -10,6 +10,7 @@ internal class ListItemTest {
     @Test
     fun toWidget() {
         val item = ListItem(
+            id = "111",
             caption = "foo",
             subCaption = "bar",
             iconLeft = "1",
@@ -25,7 +26,8 @@ internal class ListItemTest {
         assertEquals(WidgetType.ListItem, widget.type)
         assertNotNull(widget.action)
 
-        assertEquals(7, widget.attributes.size)
+        assertEquals(8, widget.attributes.size)
+        assertEquals(item.id, widget.attributes["id"])
         assertEquals(item.caption, widget.attributes["caption"])
         assertEquals(item.subCaption, widget.attributes["subCaption"])
         assertEquals(item.iconLeft, widget.attributes["iconLeft"])

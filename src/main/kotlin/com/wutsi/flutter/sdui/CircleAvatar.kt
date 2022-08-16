@@ -6,11 +6,13 @@ class CircleAvatar(
     val radius: Double? = null,
     val backgroundColor: String? = null,
     val child: WidgetAware,
-    val action: Action? = null
+    val action: Action? = null,
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = CircleAvatar,
         attributes = mapOf(
+            "id" to id,
             "radius" to radius,
             "backgroundColor" to backgroundColor
         ),

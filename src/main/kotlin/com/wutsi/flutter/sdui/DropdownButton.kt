@@ -10,11 +10,13 @@ data class DropdownButton(
     val children: List<DropdownMenuItem> = emptyList(),
     val stretched: Boolean? = null,
     val outlinedBorder: Boolean? = null,
-    val action: Action? = null
+    val action: Action? = null,
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.DropdownButton,
         attributes = mapOf(
+            "id" to id,
             "name" to name,
             "value" to value,
             "hint" to hint,

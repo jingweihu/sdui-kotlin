@@ -15,11 +15,13 @@ class Badge(
     val padding: Double? = null,
     val fontSize: Double? = null,
     val child: WidgetAware? = null,
+    val id: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Badge,
         children = if (child == null) emptyList() else listOf(child.toWidget()),
         attributes = mapOf(
+            "id" to id,
             "shape" to shape,
             "position" to position,
             "color" to color,

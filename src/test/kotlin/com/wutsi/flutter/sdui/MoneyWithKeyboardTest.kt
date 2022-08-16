@@ -16,7 +16,8 @@ internal class MoneyWithKeyboardTest {
             currency = "XAF",
             value = 10000,
             keyboardColor = "2222",
-            numberFormat = "xxx"
+            numberFormat = "xxx",
+            id = "111"
         )
 
         val widget = input.toWidget()
@@ -24,7 +25,8 @@ internal class MoneyWithKeyboardTest {
         assertEquals(WidgetType.MoneyWithKeyboard, widget.type)
         assertNull(widget.action)
 
-        assertEquals(8, widget.attributes.size)
+        assertEquals(9, widget.attributes.size)
+        assertEquals(input.id, widget.attributes["id"])
         assertEquals(input.value, widget.attributes["value"])
         assertEquals(input.moneyColor, widget.attributes["moneyColor"])
         assertEquals(input.keyboardColor, widget.attributes["keyboardColor"])

@@ -10,6 +10,7 @@ internal class DropdownButtonTest {
     fun toWidget() {
         val action = Action()
         val item = DropdownButton(
+            id = "1111",
             name = "Yo",
             value = "man",
             required = true,
@@ -25,7 +26,8 @@ internal class DropdownButtonTest {
         assertEquals(DropdownButton, widget.type)
         assertEquals(action, widget.action)
 
-        assertEquals(6, widget.attributes.size)
+        assertEquals(7, widget.attributes.size)
+        assertEquals(item.id, widget.attributes["id"])
         assertEquals(item.name, widget.attributes["name"])
         assertEquals(item.value, widget.attributes["value"])
         assertEquals(item.required, widget.attributes["required"])

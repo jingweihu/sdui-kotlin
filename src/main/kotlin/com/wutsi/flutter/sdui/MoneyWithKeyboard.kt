@@ -10,12 +10,13 @@ data class MoneyWithKeyboard(
     val keyboardColor: String? = null,
     val moneyColor: String? = null,
     val keyboardButtonSize: Double? = null,
-    val numberFormat: String? = null
-
+    val numberFormat: String? = null,
+    val id: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.MoneyWithKeyboard,
         attributes = mapOf(
+            "id" to id,
             "name" to name,
             "keyboardColor" to keyboardColor,
             "moneyColor" to moneyColor,

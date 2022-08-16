@@ -10,7 +10,8 @@ internal class ImageTest {
     @Test
     fun toWidget() {
         val image = Image(
-            url = "http://img.com/1.png",
+            id = "111",
+            url = "https://img.com/1.png",
             width = 100.0,
             height = 200.0,
             fit = BoxFit.contain
@@ -21,7 +22,8 @@ internal class ImageTest {
         assertEquals(WidgetType.Image, widget.type)
         assertNull(widget.action)
 
-        assertEquals(4, widget.attributes.size)
+        assertEquals(5, widget.attributes.size)
+        assertEquals(image.id, widget.attributes["id"])
         assertEquals(image.url, widget.attributes["url"])
         assertEquals(image.width, widget.attributes["width"])
         assertEquals(image.height, widget.attributes["height"])

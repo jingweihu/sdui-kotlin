@@ -15,11 +15,13 @@ class Container(
     val height: Double? = null,
     val backgroundImageUrl: String? = null,
     val child: WidgetAware? = null,
-    val action: Action? = null
+    val action: Action? = null,
+    val id: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Container,
         attributes = mapOf(
+            "id" to id,
             "alignment" to alignment,
             "padding" to padding,
             "margin" to margin,

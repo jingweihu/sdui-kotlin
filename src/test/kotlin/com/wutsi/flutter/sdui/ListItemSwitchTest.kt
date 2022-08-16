@@ -9,6 +9,7 @@ internal class ListItemSwitchTest {
     @Test
     fun toWidget() {
         val item = ListItemSwitch(
+            id = "111",
             name = "field",
             selected = true,
             caption = "foo",
@@ -22,7 +23,8 @@ internal class ListItemSwitchTest {
 
         assertEquals(item.action, widget.action)
 
-        assertEquals(5, widget.attributes.size)
+        assertEquals(6, widget.attributes.size)
+        assertEquals(item.id, widget.attributes["id"])
         assertEquals(item.caption, widget.attributes["caption"])
         assertEquals(item.subCaption, widget.attributes["subCaption"])
         assertEquals(item.icon, widget.attributes["icon"])

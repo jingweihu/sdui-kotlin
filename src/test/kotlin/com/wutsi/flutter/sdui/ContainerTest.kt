@@ -10,6 +10,7 @@ internal class ContainerTest {
     @Test
     fun toWidget() {
         val container = Container(
+            id = "111",
             padding = 1.0,
             alignment = BottomCenter,
             background = "aa0000",
@@ -29,7 +30,8 @@ internal class ContainerTest {
         assertEquals(WidgetType.Container, widget.type)
         assertEquals(container.action, widget.action)
 
-        assertEquals(10, widget.attributes.size)
+        assertEquals(11, widget.attributes.size)
+        assertEquals(container.id, widget.attributes["id"])
         assertEquals(container.padding, widget.attributes["padding"])
         assertEquals(container.alignment, widget.attributes["alignment"])
         assertEquals(container.background, widget.attributes["background"])

@@ -16,7 +16,8 @@ internal class ChipTest {
             padding = 10.0,
             elevation = 1.0,
             shadowColor = "xxx",
-            fontSize = 55.0
+            fontSize = 55.0,
+            id = "111"
         )
 
         val widget = obj.toWidget()
@@ -25,7 +26,8 @@ internal class ChipTest {
 
         assertEquals(WidgetType.Chip, widget.type)
 
-        assertEquals(7, widget.attributes.size)
+        assertEquals(8, widget.attributes.size)
+        assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.padding, widget.attributes["padding"])
         assertEquals(obj.color, widget.attributes["color"])
         assertEquals(obj.elevation, widget.attributes["elevation"])

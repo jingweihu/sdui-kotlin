@@ -12,6 +12,7 @@ internal class ColumnTest {
     @Test
     fun toWidget() {
         val obj = Column(
+            id = "111",
             children = listOf(Container(), Container()),
             mainAxisAlignment = center,
             crossAxisAlignment = baseline,
@@ -23,7 +24,8 @@ internal class ColumnTest {
         assertEquals(WidgetType.Column, widget.type)
         assertNull(widget.action)
 
-        assertEquals(3, widget.attributes.size)
+        assertEquals(4, widget.attributes.size)
+        assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.mainAxisAlignment, widget.attributes["mainAxisAlignment"])
         assertEquals(obj.crossAxisAlignment, widget.attributes["crossAxisAlignment"])
         assertEquals(obj.mainAxisSize, widget.attributes["mainAxisSize"])

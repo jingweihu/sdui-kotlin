@@ -15,7 +15,8 @@ internal class MoneyTextTest {
             numberFormat = "xxx",
             currencyFontSize = 8.0,
             valueFontSize = 20.0,
-            bold = true
+            bold = true,
+            id = "1111"
         )
 
         val widget = obj.toWidget()
@@ -23,7 +24,8 @@ internal class MoneyTextTest {
         assertEquals(WidgetType.MoneyText, widget.type)
         assertNull(widget.action)
 
-        assertEquals(7, widget.attributes.size)
+        assertEquals(8, widget.attributes.size)
+        assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.currency, widget.attributes["currency"])
         assertEquals(obj.value, widget.attributes["value"])
         assertEquals(obj.color, widget.attributes["color"])

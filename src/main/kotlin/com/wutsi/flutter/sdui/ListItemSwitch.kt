@@ -8,11 +8,13 @@ data class ListItemSwitch(
     val caption: String,
     val subCaption: String? = null,
     val icon: String? = null,
-    val action: Action? = null
+    val action: Action? = null,
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.ListItemSwitch,
         attributes = mapOf(
+            "id" to id,
             "caption" to caption,
             "subCaption" to subCaption,
             "icon" to icon,
