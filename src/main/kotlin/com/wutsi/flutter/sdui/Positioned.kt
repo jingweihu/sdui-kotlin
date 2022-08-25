@@ -19,7 +19,7 @@ class Positioned(
             "left" to left,
             "right" to right,
             "width" to width,
-            "height" to height,
+            "height" to height
         ),
         children = listOf(child.toWidget())
     )

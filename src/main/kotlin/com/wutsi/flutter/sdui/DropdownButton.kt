@@ -11,7 +11,7 @@ data class DropdownButton(
     val stretched: Boolean? = null,
     val outlinedBorder: Boolean? = null,
     val action: Action? = null,
-    val id: String? = null,
+    val id: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.DropdownButton,

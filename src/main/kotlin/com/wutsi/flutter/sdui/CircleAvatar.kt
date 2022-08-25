@@ -7,7 +7,7 @@ class CircleAvatar(
     val backgroundColor: String? = null,
     val child: WidgetAware,
     val action: Action? = null,
-    val id: String? = null,
+    val id: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = CircleAvatar,

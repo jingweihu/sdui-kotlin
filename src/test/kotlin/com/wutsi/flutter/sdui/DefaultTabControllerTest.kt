@@ -11,7 +11,7 @@ internal class DefaultTabControllerTest {
         val container = DefaultTabController(
             length = 3,
             initialIndex = 1,
-            child = Page(url = "xxx"),
+            child = Page(url = "xxx")
         )
 
         val widget = container.toWidget()

@@ -8,7 +8,7 @@ class Spacer(
     override fun toWidget() = Widget(
         type = Spacer,
         attributes = mapOf(
-            "flex" to flex,
+            "flex" to flex
         )
     )
 }

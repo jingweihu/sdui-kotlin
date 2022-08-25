@@ -6,7 +6,7 @@ data class DropdownMenuItem(
     val caption: String,
     val value: String,
     val icon: String? = null,
-    val enabled: Boolean = true,
+    val enabled: Boolean = true
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.DropdownMenuItem,

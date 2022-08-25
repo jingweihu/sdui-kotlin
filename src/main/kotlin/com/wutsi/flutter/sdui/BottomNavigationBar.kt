@@ -9,7 +9,7 @@ class BottomNavigationBar(
     val unselectedItemColor: String? = null,
     val iconSize: Double? = null,
     val elevation: Double? = null,
-    val items: List<BottomNavigationBarItem>,
+    val items: List<BottomNavigationBarItem>
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.BottomNavigationBar,

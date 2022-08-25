@@ -5,5 +5,5 @@ enum class DialogType {
     Information,
     Warning,
     Alert,
-    Confirm,
+    Confirm
 }

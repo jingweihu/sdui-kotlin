@@ -24,7 +24,7 @@ data class MoneyWithKeyboard(
             "value" to value,
             "currency" to currency,
             "keyboardButtonSize" to keyboardButtonSize,
-            "numberFormat" to numberFormat,
+            "numberFormat" to numberFormat
         )
     )
 }

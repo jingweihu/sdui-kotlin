@@ -16,7 +16,7 @@ class FittedBox(
         attributes = mapOf(
             "fit" to fit,
             "clip" to clip,
-            "alignment" to alignment,
+            "alignment" to alignment
         ),
         children = child?.let { listOf(child.toWidget()) } ?: emptyList()
     )

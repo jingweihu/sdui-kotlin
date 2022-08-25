@@ -8,7 +8,7 @@ class IconButton(
     val size: Double? = null,
     val color: String? = null,
     val action: Action? = null,
-    val id: String? = null,
+    val id: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = IconButton,

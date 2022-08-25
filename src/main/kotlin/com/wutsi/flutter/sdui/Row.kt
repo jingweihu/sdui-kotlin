@@ -18,7 +18,7 @@ class Row(
             "id" to id,
             "mainAxisAlignment" to mainAxisAlignment,
             "mainAxisSize" to mainAxisSize,
-            "crossAxisAlignment" to crossAxisAlignment,
+            "crossAxisAlignment" to crossAxisAlignment
         ),
         children = children.map { it.toWidget() }
     )

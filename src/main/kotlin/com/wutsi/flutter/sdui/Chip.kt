@@ -22,7 +22,7 @@ class Chip(
             "shadowColor" to shadowColor,
             "backgroundColor" to backgroundColor,
             "caption" to caption,
-            "fontSize" to fontSize,
+            "fontSize" to fontSize
         )
     )
 }

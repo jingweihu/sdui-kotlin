@@ -11,7 +11,7 @@ class ExpandablePanel(
         type = WidgetType.ExpandablePanel,
         attributes = mapOf(
             "header" to header,
-            "collapsed" to collapsed,
+            "collapsed" to collapsed
         ),
         children = listOf(expanded.toWidget())
     )

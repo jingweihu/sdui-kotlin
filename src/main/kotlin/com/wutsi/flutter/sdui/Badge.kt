@@ -30,7 +30,7 @@ class Badge(
             "borderRadius" to borderRadius,
             "elevation" to elevation,
             "fontSize" to fontSize,
-            "padding" to padding,
+            "padding" to padding
         )
     )
 }

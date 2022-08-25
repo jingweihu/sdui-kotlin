@@ -17,7 +17,7 @@ class SingleChildScrollView(
             "scrollDirection" to scrollDirection,
             "primary" to primary,
             "reverse" to reverse,
-            "padding" to padding,
-        ),
+            "padding" to padding
+        )
     )
 }

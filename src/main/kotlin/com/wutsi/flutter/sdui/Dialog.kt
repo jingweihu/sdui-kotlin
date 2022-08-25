@@ -7,7 +7,7 @@ class Dialog(
     val type: DialogType = DialogType.Alert,
     val title: String? = null,
     val message: String? = null,
-    val actions: List<WidgetAware>? = null,
+    val actions: List<WidgetAware>? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Dialog,

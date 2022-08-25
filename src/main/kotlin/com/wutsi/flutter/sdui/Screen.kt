@@ -17,7 +17,7 @@ class Screen(
         attributes = mapOf(
             "id" to id,
             "safe" to safe,
-            "backgroundColor" to backgroundColor,
+            "backgroundColor" to backgroundColor
         ),
         appBar = appBar?.toWidget(),
         floatingActionButton = floatingActionButton?.toWidget(),

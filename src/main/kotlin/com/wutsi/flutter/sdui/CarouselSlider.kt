@@ -17,7 +17,7 @@ class CarouselSlider(
             "height" to height,
             "viewportFraction" to viewportFraction,
             "enableInfiniteScroll" to enableInfiniteScroll,
-            "reverse" to reverse,
+            "reverse" to reverse
         ),
         children = children.map { it.toWidget() }
     )

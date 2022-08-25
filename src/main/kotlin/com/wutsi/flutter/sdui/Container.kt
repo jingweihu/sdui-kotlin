@@ -31,7 +31,7 @@ class Container(
             "borderColor" to borderColor,
             "height" to height,
             "width" to width,
-            "backgroundImageUrl" to backgroundImageUrl,
+            "backgroundImageUrl" to backgroundImageUrl
         ),
         children = child?.let { listOf(it.toWidget()) } ?: emptyList(),
         action = action

@@ -9,7 +9,7 @@ internal class StackTest {
     @Test
     fun toWidget() {
         val obj = Stack(
-            children = listOf(Container(), Container()),
+            children = listOf(Container(), Container())
         )
 
         val widget = obj.toWidget()

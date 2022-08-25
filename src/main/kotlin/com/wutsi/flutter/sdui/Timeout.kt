@@ -4,13 +4,13 @@ import com.wutsi.flutter.sdui.enums.WidgetType
 
 class Timeout(
     val url: String,
-    val delay: Int,
+    val delay: Int
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Timeout,
         attributes = mapOf(
             "url" to url,
-            "delay" to delay,
+            "delay" to delay
         )
     )
 }

@@ -12,7 +12,7 @@ internal class FlexibleTest {
         val flexible = Flexible(
             flex = 3,
             fit = FlexFit.Loose,
-            child = Page(url = "xxx"),
+            child = Page(url = "xxx")
         )
 
         val widget = flexible.toWidget()

@@ -11,7 +11,7 @@ class BottomNavigationBarItem(
         type = WidgetType.BottomNavigationBarItem,
         attributes = mapOf(
             "icon" to icon,
-            "caption" to caption,
+            "caption" to caption
         ),
         action = action
     )

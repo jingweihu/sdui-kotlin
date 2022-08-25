@@ -36,7 +36,8 @@ internal class InputTest {
             videoMaxDuration = 100,
             prefix = "foo",
             suffix = "BAR",
-            initialCountry = "CM"
+            initialCountry = "CM",
+            inputFormatterRegex = "[0-9]"
         )
 
         val widget = input.toWidget()
@@ -46,7 +47,7 @@ internal class InputTest {
         assertEquals(input.action?.url, widget.action?.url)
         assertEquals(input.action?.type, widget.action?.type)
 
-        assertEquals(22, widget.attributes.size)
+        assertEquals(23, widget.attributes.size)
         assertEquals(input.id, widget.attributes["id"])
         assertEquals(input.name, widget.attributes["name"])
         assertEquals(input.value, widget.attributes["value"])
@@ -69,6 +70,7 @@ internal class InputTest {
         assertEquals(input.prefix, widget.attributes["prefix"])
         assertEquals(input.suffix, widget.attributes["suffix"])
         assertEquals(input.initialCountry, widget.attributes["initialCountry"])
+        assertEquals(input.inputFormatterRegex, widget.attributes["inputFormatterRegex"])
 
         assertEquals(0, widget.children.size)
     }

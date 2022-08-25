@@ -24,7 +24,7 @@ data class MoneyWithSlider(
             "maxLength" to maxLength,
             "value" to value,
             "currency" to currency,
-            "numberFormat" to numberFormat,
+            "numberFormat" to numberFormat
         )
     )
 }

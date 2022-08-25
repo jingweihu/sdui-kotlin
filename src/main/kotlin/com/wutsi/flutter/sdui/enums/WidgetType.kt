@@ -58,5 +58,5 @@ enum class WidgetType {
     Timeout,
     SingleChildScrollView,
     Screen,
-    Wrap,
+    Wrap
 }

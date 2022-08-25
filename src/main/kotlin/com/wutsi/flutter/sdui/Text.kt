@@ -15,7 +15,7 @@ class Text(
     val overflow: TextOverflow? = null,
     val decoration: TextDecoration? = null,
     val maxLines: Int? = null,
-    val id: String? = null,
+    val id: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Text,

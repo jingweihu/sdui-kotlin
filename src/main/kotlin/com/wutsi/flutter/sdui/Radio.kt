@@ -7,7 +7,7 @@ data class Radio(
     val subCaption: String? = null,
     val value: String? = null,
     val groupValue: String? = null,
-    val id: String? = null,
+    val id: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Radio,

@@ -18,7 +18,7 @@ class GridView(
             "primary" to primary,
             "crossAxisSpacing" to crossAxisSpacing,
             "mainAxisSpacing" to mainAxisSpacing,
-            "padding" to padding,
-        ),
+            "padding" to padding
+        )
     )
 }
