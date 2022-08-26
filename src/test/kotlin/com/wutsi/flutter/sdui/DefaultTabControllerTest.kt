@@ -11,7 +11,8 @@ internal class DefaultTabControllerTest {
         val container = DefaultTabController(
             length = 3,
             initialIndex = 1,
-            child = Page(url = "xxx")
+            child = Page(url = "xxx"),
+            id = "111"
         )
 
         val widget = container.toWidget()
@@ -19,9 +20,10 @@ internal class DefaultTabControllerTest {
         assertEquals(WidgetType.DefaultTabController, widget.type)
         assertNull(widget.action)
 
-        assertEquals(2, widget.attributes.size)
+        assertEquals(3, widget.attributes.size)
         assertEquals(container.length, widget.attributes["length"])
         assertEquals(container.initialIndex, widget.attributes["initialIndex"])
+        assertEquals(container.id, widget.attributes["id"])
 
         assertEquals(1, widget.children.size)
     }
