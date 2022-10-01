@@ -6,7 +6,7 @@
 
   <artifactId>sdui-kotlin</artifactId>
   <groupId>com.wutsi.flutter</groupId>
-  <version>0.0.112</version>
+  <version>0.0.113-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>sdui-kotlin</name>
@@ -51,7 +51,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/wutsi/sdui-kotlin.git</developerConnection>
-    <tag>sdui-kotlin-0.0.112</tag>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
     <repository>
