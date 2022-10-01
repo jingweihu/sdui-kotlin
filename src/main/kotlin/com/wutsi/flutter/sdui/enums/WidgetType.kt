@@ -11,6 +11,7 @@ enum class WidgetType {
     CarouselSlider,
     Center,
     CircleAvatar,
+    Chat,
     Chip,
     Column,
     Container,
