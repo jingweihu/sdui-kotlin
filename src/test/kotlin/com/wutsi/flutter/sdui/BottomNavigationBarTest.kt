@@ -15,7 +15,8 @@ internal class BottomNavigationBarTest {
             background = "red",
             iconSize = 33.0,
             elevation = 22.0,
-            currentIndex = 4
+            currentIndex = 4,
+            fontSize = 3.0
         )
 
         val widget = obj.toWidget()
@@ -23,13 +24,14 @@ internal class BottomNavigationBarTest {
         assertEquals(WidgetType.BottomNavigationBar, widget.type)
         assertNull(widget.action)
 
-        assertEquals(6, widget.attributes.size)
+        assertEquals(7, widget.attributes.size)
         assertEquals(obj.selectedItemColor, widget.attributes["selectedItemColor"])
         assertEquals(obj.unselectedItemColor, widget.attributes["unselectedItemColor"])
         assertEquals(obj.background, widget.attributes["background"])
         assertEquals(obj.iconSize, widget.attributes["iconSize"])
         assertEquals(obj.elevation, widget.attributes["elevation"])
         assertEquals(obj.currentIndex, widget.attributes["currentIndex"])
+        assertEquals(obj.fontSize, widget.attributes["fontSize"])
 
         assertEquals(1, widget.children.size)
     }

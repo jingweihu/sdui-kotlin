@@ -10,7 +10,9 @@ internal class ChatTest {
     fun toWidget() {
         val obj = Chat(
             userId = "yo",
+            roomId = "man",
             sendMessageUrl = "https://www.google.ca/send",
+            fetchMessageUrl = "https://www.google.ca/fetch",
             userFirstName = "Ray",
             userLastName = "Sponsible",
             userPictureUrl = "https://pic.com/1.png",
@@ -23,10 +25,12 @@ internal class ChatTest {
 
         assertEquals(WidgetType.Chat, widget.type)
 
-        assertEquals(6, widget.attributes.size)
+        assertEquals(8, widget.attributes.size)
         assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.sendMessageUrl, widget.attributes["sendMessageUrl"])
+        assertEquals(obj.fetchMessageUrl, widget.attributes["fetchMessageUrl"])
         assertEquals(obj.userId, widget.attributes["userId"])
+        assertEquals(obj.roomId, widget.attributes["roomId"])
         assertEquals(obj.userFirstName, widget.attributes["userFirstName"])
         assertEquals(obj.userLastName, widget.attributes["userLastName"])
         assertEquals(obj.userPictureUrl, widget.attributes["userPictureUrl"])
