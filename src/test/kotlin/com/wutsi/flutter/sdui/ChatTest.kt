@@ -16,7 +16,15 @@ internal class ChatTest {
             userFirstName = "Ray",
             userLastName = "Sponsible",
             userPictureUrl = "https://pic.com/1.png",
-            id = "111"
+            id = "111",
+            fontSize = 12.0,
+            language = "fr",
+            receivedMessageBackground = "xx",
+            receivedMessageTextColor = "yy",
+            sentMessageBackground = "aa",
+            sentMessageTextColor = "bb",
+            showUserAvatars = true,
+            showUserNames = false
         )
 
         val widget = obj.toWidget()
@@ -25,7 +33,7 @@ internal class ChatTest {
 
         assertEquals(WidgetType.Chat, widget.type)
 
-        assertEquals(8, widget.attributes.size)
+        assertEquals(16, widget.attributes.size)
         assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.sendMessageUrl, widget.attributes["sendMessageUrl"])
         assertEquals(obj.fetchMessageUrl, widget.attributes["fetchMessageUrl"])
@@ -34,6 +42,13 @@ internal class ChatTest {
         assertEquals(obj.userFirstName, widget.attributes["userFirstName"])
         assertEquals(obj.userLastName, widget.attributes["userLastName"])
         assertEquals(obj.userPictureUrl, widget.attributes["userPictureUrl"])
+        assertEquals(obj.language, widget.attributes["language"])
+        assertEquals(obj.receivedMessageBackground, widget.attributes["receivedMessageBackground"])
+        assertEquals(obj.receivedMessageTextColor, widget.attributes["receivedMessageTextColor"])
+        assertEquals(obj.sentMessageBackground, widget.attributes["sentMessageBackground"])
+        assertEquals(obj.sentMessageTextColor, widget.attributes["sentMessageTextColor"])
+        assertEquals(obj.showUserAvatars, widget.attributes["showUserAvatars"])
+        assertEquals(obj.showUserNames, widget.attributes["showUserNames"])
 
         assertEquals(0, widget.children.size)
     }
