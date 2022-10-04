@@ -13,6 +13,7 @@ internal class ChatTest {
             roomId = "man",
             sendMessageUrl = "https://www.google.ca/send",
             fetchMessageUrl = "https://www.google.ca/fetch",
+            rtmUrl = "wss://www.google.ca/rtm",
             userFirstName = "Ray",
             userLastName = "Sponsible",
             userPictureUrl = "https://pic.com/1.png",
@@ -33,7 +34,7 @@ internal class ChatTest {
 
         assertEquals(WidgetType.Chat, widget.type)
 
-        assertEquals(16, widget.attributes.size)
+        assertEquals(17, widget.attributes.size)
         assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.sendMessageUrl, widget.attributes["sendMessageUrl"])
         assertEquals(obj.fetchMessageUrl, widget.attributes["fetchMessageUrl"])
@@ -49,6 +50,7 @@ internal class ChatTest {
         assertEquals(obj.sentMessageTextColor, widget.attributes["sentMessageTextColor"])
         assertEquals(obj.showUserAvatars, widget.attributes["showUserAvatars"])
         assertEquals(obj.showUserNames, widget.attributes["showUserNames"])
+        assertEquals(obj.rtmUrl, widget.attributes["rtmUrl"])
 
         assertEquals(0, widget.children.size)
     }
