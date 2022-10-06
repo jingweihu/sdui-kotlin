@@ -20,7 +20,8 @@ class Chat(
     val sentMessageTextColor: String? = null,
     val showUserNames: Boolean? = null,
     val showUserAvatars: Boolean? = null,
-    val tenantId: String? = null
+    val tenantId: String? = null,
+    val deviceId: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Chat,
@@ -29,6 +30,7 @@ class Chat(
             "userId" to userId,
             "roomId" to roomId,
             "tenantId" to tenantId,
+            "deviceId" to deviceId,
             "recipientUserId" to recipientUserId,
             "fetchMessageUrl" to fetchMessageUrl,
             "rtmUrl" to rtmUrl,

@@ -25,7 +25,8 @@ internal class ChatTest {
             sentMessageBackground = "aa",
             sentMessageTextColor = "bb",
             showUserAvatars = true,
-            showUserNames = false
+            showUserNames = false,
+            deviceId = "xlkfelkfldk"
         )
 
         val widget = obj.toWidget()
@@ -34,7 +35,7 @@ internal class ChatTest {
 
         assertEquals(WidgetType.Chat, widget.type)
 
-        assertEquals(18, widget.attributes.size)
+        assertEquals(19, widget.attributes.size)
         assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.recipientUserId, widget.attributes["recipientUserId"])
         assertEquals(obj.fetchMessageUrl, widget.attributes["fetchMessageUrl"])
@@ -52,6 +53,7 @@ internal class ChatTest {
         assertEquals(obj.showUserNames, widget.attributes["showUserNames"])
         assertEquals(obj.rtmUrl, widget.attributes["rtmUrl"])
         assertEquals(obj.tenantId, widget.attributes["tenantId"])
+        assertEquals(obj.deviceId, widget.attributes["deviceId"])
 
         assertEquals(0, widget.children.size)
     }
