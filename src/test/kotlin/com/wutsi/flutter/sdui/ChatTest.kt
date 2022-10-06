@@ -34,7 +34,7 @@ internal class ChatTest {
 
         assertEquals(WidgetType.Chat, widget.type)
 
-        assertEquals(17, widget.attributes.size)
+        assertEquals(18, widget.attributes.size)
         assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.recipientUserId, widget.attributes["recipientUserId"])
         assertEquals(obj.fetchMessageUrl, widget.attributes["fetchMessageUrl"])
@@ -51,6 +51,7 @@ internal class ChatTest {
         assertEquals(obj.showUserAvatars, widget.attributes["showUserAvatars"])
         assertEquals(obj.showUserNames, widget.attributes["showUserNames"])
         assertEquals(obj.rtmUrl, widget.attributes["rtmUrl"])
+        assertEquals(obj.tenantId, widget.attributes["tenantId"])
 
         assertEquals(0, widget.children.size)
     }
