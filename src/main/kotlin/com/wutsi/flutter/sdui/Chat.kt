@@ -21,7 +21,8 @@ class Chat(
     val showUserNames: Boolean? = null,
     val showUserAvatars: Boolean? = null,
     val tenantId: String? = null,
-    val deviceId: String? = null
+    val deviceId: String? = null,
+    val text: String? = null
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Chat,
@@ -44,7 +45,8 @@ class Chat(
             "sentMessageBackground" to sentMessageBackground,
             "sentMessageTextColor" to sentMessageTextColor,
             "showUserNames" to showUserNames,
-            "showUserAvatars" to showUserAvatars
+            "showUserAvatars" to showUserAvatars,
+            "text" to text
         )
     )
 }
