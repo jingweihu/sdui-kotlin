@@ -15,6 +15,7 @@ internal class SearchableDropdownTest {
             value = "man",
             required = true,
             hint = "foo bar",
+            url = "https://www.google.ca",
             children = listOf(DropdownMenuItem("y", "x"))
         )
 
@@ -23,12 +24,13 @@ internal class SearchableDropdownTest {
         assertEquals(WidgetType.SearchableDropdown, widget.type)
         assertNull(widget.action)
 
-        assertEquals(5, widget.attributes.size)
+        assertEquals(6, widget.attributes.size)
         assertEquals(item.id, widget.attributes["id"])
         assertEquals(item.name, widget.attributes["name"])
         assertEquals(item.value, widget.attributes["value"])
         assertEquals(item.required, widget.attributes["required"])
         assertEquals(item.hint, widget.attributes["hint"])
+        assertEquals(item.url, widget.attributes["url"])
 
         assertEquals(1, widget.children.size)
     }

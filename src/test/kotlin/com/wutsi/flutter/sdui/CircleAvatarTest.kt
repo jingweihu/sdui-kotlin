@@ -13,6 +13,7 @@ internal class CircleAvatarTest {
             id = "111",
             radius = 30.0,
             backgroundColor = "xxx",
+            foregroundColor = "vvv",
             child = Container(),
             action = Action(type = ActionType.Command)
         )
@@ -22,10 +23,11 @@ internal class CircleAvatarTest {
         assertEquals(WidgetType.CircleAvatar, widget.type)
         assertEquals(obj.action, widget.action)
 
-        assertEquals(3, widget.attributes.size)
+        assertEquals(4, widget.attributes.size)
         assertEquals(obj.radius, widget.attributes["radius"])
         assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.backgroundColor, widget.attributes["backgroundColor"])
+        assertEquals(obj.foregroundColor, widget.attributes["foregroundColor"])
 
         assertEquals(1, widget.children.size)
     }
