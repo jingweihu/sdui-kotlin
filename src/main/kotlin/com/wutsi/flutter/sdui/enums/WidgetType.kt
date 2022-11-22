@@ -13,6 +13,7 @@ enum class WidgetType {
     CircleAvatar,
     Chat,
     Chip,
+    ClipRRect,
     Column,
     Container,
     DefaultTabController,

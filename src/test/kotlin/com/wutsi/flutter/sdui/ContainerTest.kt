@@ -41,6 +41,7 @@ internal class ContainerTest {
         assertEquals(container.width, widget.attributes["width"])
         assertEquals(container.height, widget.attributes["height"])
         assertEquals(container.backgroundImageUrl, widget.attributes["backgroundImageUrl"])
+        assertEquals(container.borderRadius, widget.attributes["borderRadius"])
 
         assertEquals(1, widget.children.size)
     }
