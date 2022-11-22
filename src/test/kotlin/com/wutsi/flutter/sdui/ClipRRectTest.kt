@@ -15,7 +15,7 @@ internal class ClipRRectTest {
 
         val widget = container.toWidget()
 
-        assertEquals(WidgetType.Container, widget.type)
+        assertEquals(WidgetType.ClipRRect, widget.type)
         assertNull(widget.action)
 
         assertEquals(1, widget.attributes.size)
