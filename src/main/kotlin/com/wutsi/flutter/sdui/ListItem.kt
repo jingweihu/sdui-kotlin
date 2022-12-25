@@ -11,7 +11,7 @@ data class ListItem(
     val leading: WidgetAware? = null,
     val trailing: WidgetAware? = null,
     val action: Action? = null,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.ListItem,
@@ -23,8 +23,8 @@ data class ListItem(
             "iconRight" to iconRight,
             "padding" to padding,
             "trailing" to trailing?.toWidget(),
-            "leading" to leading?.toWidget()
+            "leading" to leading?.toWidget(),
         ),
-        action = action
+        action = action,
     )
 }

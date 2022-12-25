@@ -14,7 +14,7 @@ internal class ListItemSwitchTest {
             selected = true,
             caption = "foo",
             subCaption = "bar",
-            icon = "1"
+            icon = "1",
         )
 
         val widget = item.toWidget()

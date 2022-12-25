@@ -29,11 +29,11 @@ internal class ScreenTest {
             backgroundColor = "#ffff00",
             appBar = AppBar(
                 title = "Yo",
-                actions = listOf(IconButton("1"), IconButton("2"))
+                actions = listOf(IconButton("1"), IconButton("2")),
             ),
             floatingActionButton = Button(
-                id = "1"
-            )
+                id = "1",
+            ),
         )
 
         val widget = screen.toWidget()

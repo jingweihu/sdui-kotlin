@@ -16,7 +16,7 @@ internal class MoneyTextTest {
             currencyFontSize = 8.0,
             valueFontSize = 20.0,
             bold = true,
-            id = "1111"
+            id = "1111",
         )
 
         val widget = obj.toWidget()

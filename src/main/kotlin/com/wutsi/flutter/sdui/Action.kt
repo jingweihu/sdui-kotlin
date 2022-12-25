@@ -10,5 +10,5 @@ class Action(
     val parameters: Map<String, String>? = null,
     val message: String? = null,
     val trackEvent: String? = null,
-    val trackProductId: String? = null
+    val trackProductId: String? = null,
 )

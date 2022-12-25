@@ -22,7 +22,7 @@ internal class BadgeTest {
             backgroundColor = "eee",
             caption = "foo",
             fontSize = 55.0,
-            padding = 11.0
+            padding = 11.0,
         )
 
         val widget = obj.toWidget()

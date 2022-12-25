@@ -9,7 +9,7 @@ class Positioned(
     val right: Double? = null,
     val width: Double? = null,
     val height: Double? = null,
-    val child: WidgetAware
+    val child: WidgetAware,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Positioned,
@@ -19,8 +19,8 @@ class Positioned(
             "left" to left,
             "right" to right,
             "width" to width,
-            "height" to height
+            "height" to height,
         ),
-        children = listOf(child.toWidget())
+        children = listOf(child.toWidget()),
     )
 }

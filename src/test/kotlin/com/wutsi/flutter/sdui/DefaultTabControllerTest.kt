@@ -12,7 +12,7 @@ internal class DefaultTabControllerTest {
             length = 3,
             initialIndex = 1,
             child = Page(url = "xxx"),
-            id = "111"
+            id = "111",
         )
 
         val widget = container.toWidget()

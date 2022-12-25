@@ -15,7 +15,7 @@ internal class QrImageTest {
             size = 300.0,
             padding = 10.0,
             embeddedImageUrl = "http://img.com/1.png",
-            embeddedImageSize = 64.0
+            embeddedImageSize = 64.0,
         )
 
         val widget = group.toWidget()

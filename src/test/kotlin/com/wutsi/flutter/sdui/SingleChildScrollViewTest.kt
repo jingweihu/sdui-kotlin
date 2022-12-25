@@ -14,7 +14,7 @@ internal class SingleChildScrollViewTest {
             padding = 10.0,
             primary = true,
             scrollDirection = Axis.Horizontal,
-            reverse = false
+            reverse = false,
         )
 
         val widget = obj.toWidget()

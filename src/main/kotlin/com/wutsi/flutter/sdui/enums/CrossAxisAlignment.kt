@@ -5,5 +5,5 @@ enum class CrossAxisAlignment {
     end,
     center,
     stretch,
-    baseline
+    baseline,
 }

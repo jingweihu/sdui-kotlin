@@ -9,7 +9,7 @@ internal class HtmlTest {
     @Test
     fun toWidget() {
         val obj = Html(
-            data = "<p>Hello</p>"
+            data = "<p>Hello</p>",
         )
 
         val widget = obj.toWidget()

@@ -10,7 +10,7 @@ class BottomNavigationBar(
     val fontSize: Double? = null,
     val iconSize: Double? = null,
     val elevation: Double? = null,
-    val items: List<BottomNavigationBarItem>
+    val items: List<BottomNavigationBarItem>,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.BottomNavigationBar,
@@ -21,8 +21,8 @@ class BottomNavigationBar(
             "iconSize" to iconSize,
             "elevation" to elevation,
             "fontSize" to fontSize,
-            "currentIndex" to currentIndex
+            "currentIndex" to currentIndex,
         ),
-        children = items.map { it.toWidget() }
+        children = items.map { it.toWidget() },
     )
 }

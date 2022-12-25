@@ -9,7 +9,7 @@ internal class PhotoViewTest {
     @Test
     fun toWidget() {
         val obj = PhotoView(
-            url = "http://img.com/1.png"
+            url = "http://img.com/1.png",
         )
 
         val widget = obj.toWidget()

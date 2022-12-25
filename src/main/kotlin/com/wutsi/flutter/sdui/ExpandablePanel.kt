@@ -5,14 +5,14 @@ import com.wutsi.flutter.sdui.enums.WidgetType
 class ExpandablePanel(
     val header: String,
     val collapsed: String? = null,
-    val expanded: WidgetAware
+    val expanded: WidgetAware,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.ExpandablePanel,
         attributes = mapOf(
             "header" to header,
-            "collapsed" to collapsed
+            "collapsed" to collapsed,
         ),
-        children = listOf(expanded.toWidget())
+        children = listOf(expanded.toWidget()),
     )
 }

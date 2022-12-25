@@ -11,7 +11,7 @@ internal class BottomNavigationBarItemTest {
         val obj = BottomNavigationBarItem(
             icon = "0erf",
             caption = "foo",
-            action = Action(type = ActionType.Route, url = "http://www.google.ca")
+            action = Action(type = ActionType.Route, url = "http://www.google.ca"),
         )
 
         val widget = obj.toWidget()

@@ -9,7 +9,7 @@ internal class QrViewTest {
     @Test
     fun toWidget() {
         val obj = QrView(
-            submitUrl = "https://www.google.ca"
+            submitUrl = "https://www.google.ca",
         )
 
         val widget = obj.toWidget()

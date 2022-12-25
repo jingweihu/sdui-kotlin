@@ -16,7 +16,7 @@ internal class RowTest {
             mainAxisAlignment = center,
             crossAxisAlignment = baseline,
             mainAxisSize = max,
-            id = "111"
+            id = "111",
         )
 
         val widget = obj.toWidget()

@@ -10,7 +10,7 @@ class Chip(
     val padding: Double? = null,
     val elevation: Double? = null,
     val fontSize: Double? = null,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Chip,
@@ -22,7 +22,7 @@ class Chip(
             "shadowColor" to shadowColor,
             "backgroundColor" to backgroundColor,
             "caption" to caption,
-            "fontSize" to fontSize
-        )
+            "fontSize" to fontSize,
+        ),
     )
 }

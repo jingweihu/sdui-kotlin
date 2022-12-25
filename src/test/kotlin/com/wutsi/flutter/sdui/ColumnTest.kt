@@ -16,7 +16,7 @@ internal class ColumnTest {
             children = listOf(Container(), Container()),
             mainAxisAlignment = center,
             crossAxisAlignment = baseline,
-            mainAxisSize = max
+            mainAxisSize = max,
         )
 
         val widget = obj.toWidget()

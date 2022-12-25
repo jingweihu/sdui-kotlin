@@ -11,7 +11,7 @@ data class MoneyWithSlider(
     val sliderColor: String? = null,
     val moneyColor: String? = null,
     val numberFormat: String? = null,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.MoneyWithSlider,
@@ -24,7 +24,7 @@ data class MoneyWithSlider(
             "maxLength" to maxLength,
             "value" to value,
             "currency" to currency,
-            "numberFormat" to numberFormat
-        )
+            "numberFormat" to numberFormat,
+        ),
     )
 }

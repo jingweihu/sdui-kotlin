@@ -15,7 +15,7 @@ class Badge(
     val padding: Double? = null,
     val fontSize: Double? = null,
     val child: WidgetAware? = null,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Badge,
@@ -30,7 +30,7 @@ class Badge(
             "borderRadius" to borderRadius,
             "elevation" to elevation,
             "fontSize" to fontSize,
-            "padding" to padding
-        )
+            "padding" to padding,
+        ),
     )
 }

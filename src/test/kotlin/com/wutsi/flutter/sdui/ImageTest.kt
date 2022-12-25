@@ -14,7 +14,7 @@ internal class ImageTest {
             url = "https://img.com/1.png",
             width = 100.0,
             height = 200.0,
-            fit = BoxFit.contain
+            fit = BoxFit.contain,
         )
 
         val widget = image.toWidget()

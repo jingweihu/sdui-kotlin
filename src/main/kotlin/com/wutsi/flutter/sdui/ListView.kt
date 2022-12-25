@@ -8,7 +8,7 @@ data class ListView(
     val separator: Boolean? = null,
     val separatorColor: String? = null,
     val children: List<WidgetAware>,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.ListView,
@@ -16,8 +16,8 @@ data class ListView(
             "id" to id,
             "direction" to direction,
             "separator" to separator,
-            "separatorColor" to separatorColor
+            "separatorColor" to separatorColor,
         ),
-        children = children.map { it.toWidget() }
+        children = children.map { it.toWidget() },
     )
 }

@@ -16,11 +16,11 @@ internal class ButtonTest {
             type = Outlined,
             stretched = false,
             action = Action(
-                type = Prompt
+                type = Prompt,
             ),
             icon = "xxx",
             iconSize = 11.0,
-            fontSize = 8.0
+            fontSize = 8.0,
         )
 
         val widget = button.toWidget()

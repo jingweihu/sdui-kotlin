@@ -21,7 +21,7 @@ internal class TextTest {
             overflow = Clip,
             decoration = Strikethrough,
             maxLines = 3,
-            id = "111"
+            id = "111",
         )
 
         val widget = text.toWidget()

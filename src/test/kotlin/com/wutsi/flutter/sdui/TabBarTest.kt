@@ -9,7 +9,7 @@ internal class TabBarTest {
     @Test
     fun toWidget() {
         val obj = TabBar(
-            tabs = listOf(Container(), Container())
+            tabs = listOf(Container(), Container()),
         )
 
         val widget = obj.toWidget()

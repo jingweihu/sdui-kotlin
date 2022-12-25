@@ -15,7 +15,7 @@ internal class FittedBoxTest {
             clip = Clip.antiAlias,
             fit = BoxFit.fitWidth,
             child = Container(),
-            alignment = Alignment.Center
+            alignment = Alignment.Center,
         )
 
         val widget = obj.toWidget()

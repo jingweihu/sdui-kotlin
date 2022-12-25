@@ -22,7 +22,7 @@ internal class ContainerTest {
             width = 111.0,
             height = 22.0,
             backgroundImageUrl = "https://www.img.com/1.png",
-            action = Action(type = ActionType.Route)
+            action = Action(type = ActionType.Route),
         )
 
         val widget = container.toWidget()

@@ -12,7 +12,7 @@ internal class ExpandablePanelTest {
         val obj = ExpandablePanel(
             header = "Yo",
             collapsed = "Man",
-            expanded = Text("This is a long text")
+            expanded = Text("This is a long text"),
         )
 
         val widget = obj.toWidget()

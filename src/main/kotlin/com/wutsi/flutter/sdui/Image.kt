@@ -8,7 +8,7 @@ class Image(
     val width: Double? = null,
     val height: Double? = null,
     val fit: BoxFit? = null,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Image,
@@ -17,7 +17,7 @@ class Image(
             "url" to url,
             "width" to width,
             "height" to height,
-            "fit" to fit
-        )
+            "fit" to fit,
+        ),
     )
 }

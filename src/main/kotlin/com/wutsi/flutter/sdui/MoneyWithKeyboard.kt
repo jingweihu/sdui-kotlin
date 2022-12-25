@@ -11,7 +11,7 @@ data class MoneyWithKeyboard(
     val moneyColor: String? = null,
     val keyboardButtonSize: Double? = null,
     val numberFormat: String? = null,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.MoneyWithKeyboard,
@@ -24,7 +24,7 @@ data class MoneyWithKeyboard(
             "value" to value,
             "currency" to currency,
             "keyboardButtonSize" to keyboardButtonSize,
-            "numberFormat" to numberFormat
-        )
+            "numberFormat" to numberFormat,
+        ),
     )
 }

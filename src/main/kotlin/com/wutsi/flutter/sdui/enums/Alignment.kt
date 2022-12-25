@@ -9,5 +9,5 @@ enum class Alignment {
     CenterRight,
     TopCenter,
     TopLeft,
-    TopRight
+    TopRight,
 }

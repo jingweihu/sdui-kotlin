@@ -6,5 +6,5 @@ enum class TextAlignment {
     Center,
     Justify,
     End,
-    Start
+    Start,
 }

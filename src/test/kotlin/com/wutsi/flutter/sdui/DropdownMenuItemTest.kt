@@ -12,7 +12,7 @@ internal class DropdownMenuItemTest {
             caption = "Yo",
             value = "man",
             icon = "000",
-            enabled = true
+            enabled = true,
         )
 
         val widget = item.toWidget()

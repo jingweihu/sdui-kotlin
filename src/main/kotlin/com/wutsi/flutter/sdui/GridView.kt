@@ -8,7 +8,7 @@ class GridView(
     val crossAxisSpacing: Double? = null,
     val mainAxisSpacing: Double? = null,
     val padding: Double? = null,
-    val children: List<WidgetAware> = emptyList()
+    val children: List<WidgetAware> = emptyList(),
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.GridView,
@@ -18,7 +18,7 @@ class GridView(
             "primary" to primary,
             "crossAxisSpacing" to crossAxisSpacing,
             "mainAxisSpacing" to mainAxisSpacing,
-            "padding" to padding
-        )
+            "padding" to padding,
+        ),
     )
 }

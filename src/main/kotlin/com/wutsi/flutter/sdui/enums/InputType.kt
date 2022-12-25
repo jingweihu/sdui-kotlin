@@ -11,5 +11,5 @@ enum class InputType {
     Url,
     Image,
     Video,
-    File
+    File,
 }

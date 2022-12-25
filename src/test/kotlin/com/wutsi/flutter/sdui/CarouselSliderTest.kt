@@ -14,7 +14,7 @@ internal class CarouselSliderTest {
             aspectRatio = 8.0 / 10,
             reverse = true,
             enableInfiniteScroll = false,
-            viewportFraction = .9
+            viewportFraction = .9,
         )
 
         val widget = obj.toWidget()

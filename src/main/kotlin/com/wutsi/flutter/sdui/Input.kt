@@ -28,7 +28,7 @@ class Input(
     val prefix: String? = null,
     val suffix: String? = null,
     val initialCountry: String? = null,
-    val inputFormatterRegex: String? = null
+    val inputFormatterRegex: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Input,
@@ -55,8 +55,8 @@ class Input(
             "prefix" to prefix,
             "suffix" to suffix,
             "initialCountry" to initialCountry,
-            "inputFormatterRegex" to inputFormatterRegex
+            "inputFormatterRegex" to inputFormatterRegex,
         ),
-        action = action
+        action = action,
     )
 }

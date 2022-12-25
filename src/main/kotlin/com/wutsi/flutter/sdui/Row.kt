@@ -10,7 +10,7 @@ class Row(
     val mainAxisSize: MainAxisSize? = null,
     val crossAxisAlignment: CrossAxisAlignment? = null,
     val children: List<WidgetAware>,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Row,
@@ -18,8 +18,8 @@ class Row(
             "id" to id,
             "mainAxisAlignment" to mainAxisAlignment,
             "mainAxisSize" to mainAxisSize,
-            "crossAxisAlignment" to crossAxisAlignment
+            "crossAxisAlignment" to crossAxisAlignment,
         ),
-        children = children.map { it.toWidget() }
+        children = children.map { it.toWidget() },
     )
 }

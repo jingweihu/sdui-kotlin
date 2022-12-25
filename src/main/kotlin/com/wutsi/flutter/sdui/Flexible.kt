@@ -7,14 +7,14 @@ import com.wutsi.flutter.sdui.enums.WidgetType.Flexible
 class Flexible(
     val flex: Int = 1,
     val fit: FlexFit = Tight,
-    val child: WidgetAware? = null
+    val child: WidgetAware? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Flexible,
         attributes = mapOf(
             "flex" to flex,
-            "fit" to fit
+            "fit" to fit,
         ),
-        children = child?.let { listOf(it.toWidget()) } ?: emptyList()
+        children = child?.let { listOf(it.toWidget()) } ?: emptyList(),
     )
 }

@@ -14,7 +14,7 @@ internal class ListViewTest {
             direction = Axis.Horizontal,
             separator = true,
             children = listOf(Radio("1"), Radio("2")),
-            separatorColor = "xxx"
+            separatorColor = "xxx",
         )
 
         val widget = group.toWidget()

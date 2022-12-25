@@ -10,7 +10,7 @@ internal class TimeoutTest {
     fun toWidget() {
         val obj = Timeout(
             url = "http://www.google.ca",
-            delay = 15
+            delay = 15,
         )
 
         val widget = obj.toWidget()

@@ -17,7 +17,7 @@ internal class ChipTest {
             elevation = 1.0,
             shadowColor = "xxx",
             fontSize = 55.0,
-            id = "111"
+            id = "111",
         )
 
         val widget = obj.toWidget()

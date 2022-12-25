@@ -18,7 +18,7 @@ internal class ListItemTest {
             padding = 10.0,
             action = Action(),
             leading = Container(),
-            trailing = Container()
+            trailing = Container(),
         )
 
         val widget = item.toWidget()

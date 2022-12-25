@@ -8,7 +8,7 @@ class CarouselSlider(
     val viewportFraction: Double? = null,
     val enableInfiniteScroll: Boolean? = null,
     val reverse: Boolean? = null,
-    val children: List<WidgetAware> = emptyList()
+    val children: List<WidgetAware> = emptyList(),
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.CarouselSlider,
@@ -17,8 +17,8 @@ class CarouselSlider(
             "height" to height,
             "viewportFraction" to viewportFraction,
             "enableInfiniteScroll" to enableInfiniteScroll,
-            "reverse" to reverse
+            "reverse" to reverse,
         ),
-        children = children.map { it.toWidget() }
+        children = children.map { it.toWidget() },
     )
 }

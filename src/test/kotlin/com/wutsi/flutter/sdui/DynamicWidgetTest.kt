@@ -10,7 +10,7 @@ internal class DynamicWidgetTest {
     @Test
     fun toWidget() {
         val obj = DynamicWidget(
-            url = "https://www.google.com"
+            url = "https://www.google.com",
         )
 
         val widget = obj.toWidget()

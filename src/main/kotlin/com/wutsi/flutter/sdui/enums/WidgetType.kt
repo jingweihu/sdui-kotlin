@@ -11,7 +11,7 @@ enum class WidgetType {
     CarouselSlider,
     Center,
     CircleAvatar,
-    Chat,
+    Chart,
     Chip,
     ClipRRect,
     Column,
@@ -60,5 +60,5 @@ enum class WidgetType {
     Timeout,
     SingleChildScrollView,
     Screen,
-    Wrap
+    Wrap,
 }

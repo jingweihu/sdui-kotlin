@@ -14,7 +14,7 @@ internal class GridViewTest {
             primary = true,
             crossAxisCount = 2,
             crossAxisSpacing = 10.0,
-            mainAxisSpacing = 11.0
+            mainAxisSpacing = 11.0,
         )
 
         val widget = obj.toWidget()

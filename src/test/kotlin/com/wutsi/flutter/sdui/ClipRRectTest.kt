@@ -10,7 +10,7 @@ internal class ClipRRectTest {
     fun toWidget() {
         val container = ClipRRect(
             borderRadius = 3.0,
-            child = Page(url = "xxx")
+            child = Page(url = "xxx"),
         )
 
         val widget = container.toWidget()

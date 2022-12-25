@@ -16,7 +16,7 @@ internal class BottomNavigationBarTest {
             iconSize = 33.0,
             elevation = 22.0,
             currentIndex = 4,
-            fontSize = 3.0
+            fontSize = 3.0,
         )
 
         val widget = obj.toWidget()

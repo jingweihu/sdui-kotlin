@@ -16,7 +16,7 @@ internal class RadioGroupTest {
             separator = true,
             separatorColor = "xxx",
             children = listOf(Radio("1"), Radio("2")),
-            action = Action()
+            action = Action(),
         )
 
         val widget = group.toWidget()

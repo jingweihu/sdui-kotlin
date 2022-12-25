@@ -15,7 +15,7 @@ internal class CircleAvatarTest {
             backgroundColor = "xxx",
             foregroundColor = "vvv",
             child = Container(),
-            action = Action(type = ActionType.Command)
+            action = Action(type = ActionType.Command),
         )
 
         val widget = obj.toWidget()

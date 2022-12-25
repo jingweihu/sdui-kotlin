@@ -14,7 +14,7 @@ internal class RadioTest {
             subCaption = "bar",
             value = "1",
             groupValue = "2",
-            id = "1111"
+            id = "1111",
         )
 
         val widget = radio.toWidget()

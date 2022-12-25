@@ -15,7 +15,7 @@ class Button(
     val iconSize: Double? = null,
     val iconColor: String? = null,
     val color: String? = null,
-    val fontSize: Double? = null
+    val fontSize: Double? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Button,
@@ -30,7 +30,7 @@ class Button(
             "iconSize" to iconSize,
             "iconColor" to iconColor,
             "color" to color,
-            "fontSize" to fontSize
-        )
+            "fontSize" to fontSize,
+        ),
     )
 }

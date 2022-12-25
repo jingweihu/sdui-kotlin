@@ -9,15 +9,15 @@ class FittedBox(
     val fit: BoxFit? = null,
     val clip: Clip? = null,
     val alignment: Alignment? = null,
-    val child: WidgetAware? = null
+    val child: WidgetAware? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.FittedBox,
         attributes = mapOf(
             "fit" to fit,
             "clip" to clip,
-            "alignment" to alignment
+            "alignment" to alignment,
         ),
-        children = child?.let { listOf(child.toWidget()) } ?: emptyList()
+        children = child?.let { listOf(child.toWidget()) } ?: emptyList(),
     )
 }

@@ -4,5 +4,5 @@ enum class TextOverflow {
     Clip,
     Elipsis,
     Fade,
-    Visible
+    Visible,
 }

@@ -9,7 +9,7 @@ internal class TabBarViewTest {
     @Test
     fun toWidget() {
         val obj = TabBarView(
-            children = listOf(Container(), Container())
+            children = listOf(Container(), Container()),
         )
 
         val widget = obj.toWidget()

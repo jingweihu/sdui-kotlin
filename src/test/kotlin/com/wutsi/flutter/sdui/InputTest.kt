@@ -20,7 +20,7 @@ internal class InputTest {
             minLength = 3,
             action = Action(
                 url = "http://www.google.ca.com/",
-                type = Command
+                type = Command,
             ),
             caption = "Yo",
             enabled = false,
@@ -37,7 +37,7 @@ internal class InputTest {
             prefix = "foo",
             suffix = "BAR",
             initialCountry = "CM",
-            inputFormatterRegex = "[0-9]"
+            inputFormatterRegex = "[0-9]",
         )
 
         val widget = input.toWidget()

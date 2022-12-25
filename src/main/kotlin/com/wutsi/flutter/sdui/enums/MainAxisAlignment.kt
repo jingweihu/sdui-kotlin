@@ -6,5 +6,5 @@ enum class MainAxisAlignment {
     center,
     spaceBetween,
     spaceAround,
-    spaceEvenly
+    spaceEvenly,
 }

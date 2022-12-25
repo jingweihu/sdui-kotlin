@@ -10,7 +10,7 @@ internal class FormTest {
     @Test
     fun toWidget() {
         val form = Form(
-            children = listOf(Page(url = "xxx"), Container())
+            children = listOf(Page(url = "xxx"), Container()),
         )
 
         val widget = form.toWidget()

@@ -7,7 +7,7 @@ class Camera(
     val name: String,
     val uploadUrl: String,
     val action: Action? = null,
-    val lensDirection: CameraLensDirection? = null
+    val lensDirection: CameraLensDirection? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.Camera,
@@ -15,7 +15,7 @@ class Camera(
         attributes = mapOf(
             "name" to name,
             "uploadUrl" to uploadUrl,
-            "lensDirection" to lensDirection
-        )
+            "lensDirection" to lensDirection,
+        ),
     )
 }

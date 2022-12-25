@@ -5,5 +5,5 @@ enum class BadgePosition {
     TopEnd,
     BottomStart,
     BottomEnd,
-    Center
+    Center,
 }

@@ -13,7 +13,7 @@ internal class WrapTest {
             children = listOf(Container(), Container()),
             runSpacing = 1.0,
             spacing = 3.0,
-            direction = Axis.Horizontal
+            direction = Axis.Horizontal,
         )
 
         val widget = obj.toWidget()

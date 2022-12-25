@@ -11,7 +11,7 @@ data class DropdownButton(
     val stretched: Boolean? = null,
     val outlinedBorder: Boolean? = null,
     val action: Action? = null,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.DropdownButton,
@@ -22,9 +22,9 @@ data class DropdownButton(
             "hint" to hint,
             "required" to required,
             "stretched" to stretched,
-            "outlinedBorder" to outlinedBorder
+            "outlinedBorder" to outlinedBorder,
         ),
         children = children.map { it.toWidget() },
-        action = action
+        action = action,
     )
 }

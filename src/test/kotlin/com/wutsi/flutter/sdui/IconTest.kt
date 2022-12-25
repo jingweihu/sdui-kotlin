@@ -11,7 +11,7 @@ internal class IconTest {
         val icon = Icon(
             code = "0erf",
             size = 100.0,
-            color = "ff0000"
+            color = "ff0000",
         )
 
         val widget = icon.toWidget()

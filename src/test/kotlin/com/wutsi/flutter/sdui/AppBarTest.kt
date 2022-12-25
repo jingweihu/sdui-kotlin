@@ -16,7 +16,7 @@ internal class AppBarTest {
             backgroundColor = "#ff0000",
             leading = IconButton("c"),
             automaticallyImplyLeading = false,
-            bottom = TabBar(tabs = listOf(Container()))
+            bottom = TabBar(tabs = listOf(Container())),
         )
 
         val widget = obj.toWidget()

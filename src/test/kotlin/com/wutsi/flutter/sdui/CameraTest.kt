@@ -15,8 +15,8 @@ internal class CameraTest {
             name = "Yo",
             lensDirection = CameraLensDirection.external,
             action = Action(
-                type = ActionType.Prompt
-            )
+                type = ActionType.Prompt,
+            ),
         )
 
         val widget = obj.toWidget()

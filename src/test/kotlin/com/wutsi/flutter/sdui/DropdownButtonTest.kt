@@ -18,7 +18,7 @@ internal class DropdownButtonTest {
             children = listOf(DropdownMenuItem("y", "x")),
             action = action,
             stretched = true,
-            outlinedBorder = true
+            outlinedBorder = true,
         )
 
         val widget = item.toWidget()

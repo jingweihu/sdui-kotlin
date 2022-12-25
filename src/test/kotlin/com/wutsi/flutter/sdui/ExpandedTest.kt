@@ -9,7 +9,7 @@ internal class ExpandedTest {
     @Test
     fun toWidget() {
         val obj = Expanded(
-            child = Container()
+            child = Container(),
         )
 
         val widget = obj.toWidget()

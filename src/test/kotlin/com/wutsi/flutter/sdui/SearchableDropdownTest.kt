@@ -16,7 +16,7 @@ internal class SearchableDropdownTest {
             required = true,
             hint = "foo bar",
             url = "https://www.google.ca",
-            children = listOf(DropdownMenuItem("y", "x"))
+            children = listOf(DropdownMenuItem("y", "x")),
         )
 
         val widget = item.toWidget()

@@ -16,8 +16,8 @@ internal class PageViewTest {
             scrollOnUserInput = true,
             children = listOf(
                 Page(url = "https://www.google.ca/1"),
-                Page(url = "https://www.google.ca/2")
-            )
+                Page(url = "https://www.google.ca/2"),
+            ),
         )
 
         val widget = view.toWidget()

@@ -9,7 +9,7 @@ internal class TabTest {
     fun toWidget() {
         val obj = Tab(
             icon = "xx",
-            caption = "yyy"
+            caption = "yyy",
         )
 
         val widget = obj.toWidget()

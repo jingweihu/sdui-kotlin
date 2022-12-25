@@ -18,7 +18,7 @@ internal class MoneyWithSliderTest {
             value = 10000,
             sliderColor = "2222",
             numberFormat = "xxx",
-            id = "222"
+            id = "222",
         )
 
         val widget = input.toWidget()

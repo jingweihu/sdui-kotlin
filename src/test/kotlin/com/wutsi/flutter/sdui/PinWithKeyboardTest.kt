@@ -13,12 +13,12 @@ internal class PinWithKeyboardTest {
             color = "1111",
             name = "foo",
             action = Action(
-                type = Prompt
+                type = Prompt,
             ),
             maxLength = 7,
             pinSize = 11.0,
             keyboardButtonSize = 90.0,
-            id = "111"
+            id = "111",
         )
 
         val widget = button.toWidget()

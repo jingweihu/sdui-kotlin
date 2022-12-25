@@ -17,7 +17,7 @@ internal class MoneyWithKeyboardTest {
             value = 10000,
             keyboardColor = "2222",
             numberFormat = "xxx",
-            id = "111"
+            id = "111",
         )
 
         val widget = input.toWidget()

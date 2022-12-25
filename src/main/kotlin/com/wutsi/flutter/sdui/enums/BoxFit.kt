@@ -7,5 +7,5 @@ enum class BoxFit {
     cover,
     fitWidth,
     fitHeight,
-    scaleDown
+    scaleDown,
 }

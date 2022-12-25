@@ -16,7 +16,7 @@ class Container(
     val backgroundImageUrl: String? = null,
     val child: WidgetAware? = null,
     val action: Action? = null,
-    val id: String? = null
+    val id: String? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = Container,
@@ -31,9 +31,9 @@ class Container(
             "borderColor" to borderColor,
             "height" to height,
             "width" to width,
-            "backgroundImageUrl" to backgroundImageUrl
+            "backgroundImageUrl" to backgroundImageUrl,
         ),
         children = child?.let { listOf(it.toWidget()) } ?: emptyList(),
-        action = action
+        action = action,
     )
 }

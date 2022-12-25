@@ -16,7 +16,7 @@ internal class PositionedTest {
             right = 4.0,
             width = 10.0,
             height = 20.0,
-            child = Container()
+            child = Container(),
         )
 
         val widget = obj.toWidget()

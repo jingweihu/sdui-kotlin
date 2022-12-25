@@ -4,5 +4,5 @@ enum class Clip {
     none,
     antiAlias,
     antiAliasWithSaveLayer,
-    hardEdge
+    hardEdge,
 }

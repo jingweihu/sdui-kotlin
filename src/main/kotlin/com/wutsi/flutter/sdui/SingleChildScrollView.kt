@@ -8,7 +8,7 @@ class SingleChildScrollView(
     val primary: Boolean? = null,
     val reverse: Boolean? = null,
     val padding: Double? = null,
-    val child: WidgetAware? = null
+    val child: WidgetAware? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.SingleChildScrollView,
@@ -17,7 +17,7 @@ class SingleChildScrollView(
             "scrollDirection" to scrollDirection,
             "primary" to primary,
             "reverse" to reverse,
-            "padding" to padding
-        )
+            "padding" to padding,
+        ),
     )
 }

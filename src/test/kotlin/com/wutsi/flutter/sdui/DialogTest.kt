@@ -13,7 +13,7 @@ internal class DialogTest {
             type = Information,
             title = "information",
             message = "Yo man",
-            actions = listOf(Button(caption = "a"), Button(caption = "b"))
+            actions = listOf(Button(caption = "a"), Button(caption = "b")),
         )
 
         val widget = dialog.toWidget()

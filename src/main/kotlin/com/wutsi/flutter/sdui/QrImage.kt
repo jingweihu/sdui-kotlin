@@ -8,7 +8,7 @@ class QrImage(
     val size: Double? = null,
     val padding: Double? = null,
     val embeddedImageUrl: String? = null,
-    val embeddedImageSize: Double? = null
+    val embeddedImageSize: Double? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = QrImage,
@@ -18,7 +18,7 @@ class QrImage(
             "size" to size,
             "padding" to padding,
             "embeddedImageUrl" to embeddedImageUrl,
-            "embeddedImageSize" to embeddedImageSize
-        )
+            "embeddedImageSize" to embeddedImageSize,
+        ),
     )
 }

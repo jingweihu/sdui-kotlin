@@ -14,7 +14,7 @@ internal class IconButtonTest {
             icon = "0erf",
             size = 100.0,
             color = "ff0000",
-            tooltip = "yo"
+            tooltip = "yo",
         )
 
         val widget = button.toWidget()
