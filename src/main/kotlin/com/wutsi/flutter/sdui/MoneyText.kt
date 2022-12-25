@@ -1,5 +1,6 @@
 package com.wutsi.flutter.sdui
 
+import com.wutsi.flutter.sdui.enums.TextAlignment
 import com.wutsi.flutter.sdui.enums.WidgetType
 
 class MoneyText(
@@ -11,6 +12,7 @@ class MoneyText(
     val currencyFontSize: Double? = null,
     val bold: Boolean? = null,
     val id: String? = null,
+    val alignment: TextAlignment? = null,
 ) : WidgetAware {
     override fun toWidget() = Widget(
         type = WidgetType.MoneyText,
@@ -23,6 +25,7 @@ class MoneyText(
             "bold" to bold,
             "valueFontSize" to valueFontSize,
             "currencyFontSize" to currencyFontSize,
+            "alignment" to alignment,
         ),
     )
 }

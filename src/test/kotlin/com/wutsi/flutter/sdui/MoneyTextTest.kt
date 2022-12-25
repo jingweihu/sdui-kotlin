@@ -1,5 +1,6 @@
 package com.wutsi.flutter.sdui
 
+import com.wutsi.flutter.sdui.enums.TextAlignment
 import com.wutsi.flutter.sdui.enums.WidgetType
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
@@ -17,6 +18,7 @@ internal class MoneyTextTest {
             valueFontSize = 20.0,
             bold = true,
             id = "1111",
+            alignment = TextAlignment.Right,
         )
 
         val widget = obj.toWidget()
@@ -24,7 +26,7 @@ internal class MoneyTextTest {
         assertEquals(WidgetType.MoneyText, widget.type)
         assertNull(widget.action)
 
-        assertEquals(8, widget.attributes.size)
+        assertEquals(9, widget.attributes.size)
         assertEquals(obj.id, widget.attributes["id"])
         assertEquals(obj.currency, widget.attributes["currency"])
         assertEquals(obj.value, widget.attributes["value"])
@@ -33,6 +35,7 @@ internal class MoneyTextTest {
         assertEquals(obj.bold, widget.attributes["bold"])
         assertEquals(obj.currencyFontSize, widget.attributes["currencyFontSize"])
         assertEquals(obj.valueFontSize, widget.attributes["valueFontSize"])
+        assertEquals(obj.alignment, widget.attributes["alignment"])
 
         assertEquals(0, widget.children.size)
     }
